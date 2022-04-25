@@ -1,9 +1,0 @@
-package method02;
-
-public class MyClass02 {
-
-	public void test() {
-		System.out.println("zzzz");
-	}
-	
-}

@@ -1,9 +1,0 @@
-package method02;
-
-public class MyClass {
-
-	public void test() {
-		
-	}
-	
-}
