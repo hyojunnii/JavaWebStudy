@@ -1,0 +1,17 @@
+package com.kh.main;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Pikachu p = new Pikachu();
+		
+		p.setLevel(10);
+		
+		int plevel = p.getLevel();
+		
+		System.out.println(plevel);
+		
+	}
+
+}

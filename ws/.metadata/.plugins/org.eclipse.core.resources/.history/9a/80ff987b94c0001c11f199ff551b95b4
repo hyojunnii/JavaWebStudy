@@ -1,0 +1,28 @@
+package mcdonald.emp;
+
+import java.util.Scanner;
+
+public class CounterEmp {
+
+	String name;
+	int money;
+	
+	Scanner sc = new Scanner(System.in);
+	
+	public void order() {
+		System.out.println("주문 받을게요");
+		//입력받기
+		String ham = sc.nextLine();
+		
+		System.out.println(ham + "주문 받았습니다~");
+	}
+	
+	public void calc() {
+		System.out.println("계산할게요");
+		//돈 받기
+		String price = sc.nextLine();
+		
+		System.out.println(price + "원 받았습니다~");
+	}
+	
+}

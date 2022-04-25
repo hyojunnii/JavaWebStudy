@@ -1,0 +1,38 @@
+package com.kh.main;
+
+public class Charmander {
+
+	//µ¥ÀÌÅÍ
+	private int level;
+	private char type; //L,W,F
+	
+	public int getLevel() { 
+		return this.level;
+	}
+	
+	public void setLevel(int level) { 
+		this.level = level;
+	}
+	
+	public char getType() {
+		return this.type;
+	}
+	
+	public void setType(char type) {
+		this.type = type;
+	}
+	
+	//µ¿ÀÛ
+	public void bodyAttack() {
+		System.out.println("¸öÅë¹ÚÄ¡±â !!!");
+	}
+
+	public void speedAttack() {
+		System.out.println("Àü±¤¼®È­ ~~!!");
+	}
+	
+	public void fire() {
+		System.out.println("ºÒ²É¼¼·Ê ~~!!");
+	}
+	
+}

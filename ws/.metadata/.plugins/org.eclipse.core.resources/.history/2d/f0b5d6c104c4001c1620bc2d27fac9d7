@@ -1,0 +1,30 @@
+package animalCrossing.game;
+
+import java.util.Scanner;
+
+public class MakeMoneyTool {
+
+	public void moneyTool() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		MakeMoney makeMoney = new MakeMoney();
+		
+		//µ· ¹ú±â
+		System.out.println("-------------------------------");
+		System.out.println("µ·À» ¹ú¾îº¸ÀÚ!");
+		System.out.println("1. °úÀÏÆÈ±â 2. ¹«ÁÖ½ÄÇÏ±â ¡å");
+		
+		//do
+		int c = sc.nextInt();
+		if(c == 1) {
+			makeMoney.sellFruit();
+		} else if (c == 2) {
+			makeMoney.radishStock();
+		} else {
+			System.out.println("´Ù½Ã ÀÔ·ÂÇØÁà!");
+		}
+		
+	}
+	
+}

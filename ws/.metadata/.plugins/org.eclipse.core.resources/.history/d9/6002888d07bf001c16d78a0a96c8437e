@@ -1,0 +1,16 @@
+package practice;
+
+public class Practice {
+
+	public void test() {
+		System.out.println("practice start");
+		printHelloWorld();
+		System.out.println("practice end");
+		
+	}
+
+	public void printHelloWorld() {
+		System.out.println("hello world");
+	}
+
+}

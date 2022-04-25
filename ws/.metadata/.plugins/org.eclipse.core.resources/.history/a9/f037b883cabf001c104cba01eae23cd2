@@ -1,0 +1,29 @@
+package updown.main;
+
+import java.util.Scanner;
+
+public class GameManager {
+
+	public final String gameName = "업다운";
+
+	public void gameStart() {
+		System.out.println(gameName + " 게임시작");
+
+		int x = (int) Math.random() + 1;
+
+		Scanner sc = new Scanner(System.in);
+		int user = sc.nextInt();
+
+		while (true) {
+			if (user == x) {
+				System.out.println("정답입니다.");
+				break;
+			} else if (user < x) {
+				System.out.println("up");
+			} else {
+				System.out.println("down");
+			}
+		}
+	}
+
+}

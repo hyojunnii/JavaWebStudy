@@ -1,0 +1,28 @@
+package practice;
+
+public class MyClass01 {
+	
+	//객체 생성, 메소드 호출
+	
+	public String name; //전역변수 class변수 Heap
+	public int age;
+	
+	public void introduce() {
+		String name = "지역변수 생성";
+		name = "지역변수";
+		this.name = "메소드 안에서 만든 이름"; //지역변수 method변수
+		//this : 현재 객체
+		System.out.println("안녕 나는 MyClass01 타입이야");
+		System.out.println("내 이름은 " + name);
+		System.out.println("내 나이는 " + age);
+	}
+	
+	public void myMethod01() {
+		System.out.println("MyClass01 의 myMethod01 호출");
+	}
+	public void myMethod02() {
+		System.out.println("MyClass01 의 myMethod02 호출");
+	}
+	
+	
+}

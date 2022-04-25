@@ -1,0 +1,35 @@
+package animalCrossing.game;
+
+//import java.util.Scanner;
+
+public class ResidentInfo {
+
+//	Scanner sc = new Scanner(System.in);
+	
+	public ResidentInfo(String player, String townName) {
+		this.player = player;
+		this.townName = townName;
+	}
+	
+	//ตฅภฬลอ
+	private String player;
+	private String townName;
+	
+	public String getPlayer() {
+		return this.player;
+	}
+	
+	public void setPlayer(String player) {
+		this.player = player;
+	}
+	
+	public String getTownName() {
+		return this.townName;
+	}
+	
+	public void setTownName(String townName) {
+		this.townName = townName;
+	}
+	
+	
+}

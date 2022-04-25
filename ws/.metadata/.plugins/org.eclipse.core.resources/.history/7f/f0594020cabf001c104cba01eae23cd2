@@ -1,0 +1,11 @@
+package updown.main;
+
+public class GameManager {
+	
+	public final String gameName = "업다운";
+	
+	public void gameStart() {
+		System.out.println(gameName + " 게임시작");
+	}
+	
+}

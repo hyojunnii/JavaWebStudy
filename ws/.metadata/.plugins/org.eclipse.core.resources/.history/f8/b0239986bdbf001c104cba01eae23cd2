@@ -1,0 +1,6 @@
+package cafe.employee;
+
+public class CounterEmp {
+	
+	// 카운터 직원
+}

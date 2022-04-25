@@ -1,0 +1,55 @@
+package animalCrossing.game;
+
+import java.util.Scanner;
+
+public class MakeMoney {
+
+	Scanner sc = new Scanner(System.in);
+	
+	public int money;
+	public int totalMoney;
+	
+	public void sellFruit() {
+		System.out.println("과일을 따서 팔아보자!");
+//		System.out.println("몇 개를 따볼까??");
+//		int apple = sc.nextInt();
+//		System.out.println(apple + "개! 시작해보자");
+//		System.out.println();
+		System.out.println("---------- 게임 방법 ----------");
+		System.out.println("사과는 한 개에 2000원에 팔리고 있다.");
+		System.out.println("따고싶은 갯수만큼 알파벳 'o'를 입력해보자! ▼");
+		
+		while(true) {
+		String apple = sc.nextLine();
+		//// o 만으로 이루어진건 모르겠음
+		if(apple.contains("o")||apple.contains("O")) {
+			System.out.println(apple.length() + "개를 땄다!");
+			this.money = (apple.length() * 2000);
+			System.out.println(this.money + "원을 벌었다!");
+			
+			this.totalMoney += this.money;
+			System.out.println("-------------------------------");
+			System.out.println("현재 잔액 : " + this.totalMoney + "원");
+			
+			System.out.println("더 따시겠습니까? ▼ 1.예");
+			
+			int re = sc.nextInt();
+			if(re != 1) {break;}
+		} else {
+			System.out.println("알파벳 'o'를 입력하자! ▼");
+			continue;
+		}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	public void radishStock() {
+		System.out.println("무주식을 해보자!");
+	}
+}

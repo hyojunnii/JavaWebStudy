@@ -1,0 +1,39 @@
+package com.kh.main;
+
+public class Pikachu {
+	
+	//데이터
+	private int level;
+	private char type; //L,W,F
+	
+	public int getLevel() { // private 레벨 값 가져오기
+		return this.level;
+	}
+	
+	public void setLevel(int level) { // private에 값 넣기
+		this.level = level;
+	}
+	
+	public char getType() {
+		return this.type;
+	}
+	
+	public void setType(char type) {
+		this.type = type;
+	}
+	
+	//동작
+	public void bodyAttack() {
+		System.out.println("몸통박치기 !!!");
+	}
+
+	public void millionVolt() {
+		System.out.println("백만볼트 ~~!!");
+	}
+	
+	public void thunderVolt() {
+		System.out.println("썬더볼트 ~~!!");
+	}
+	
+	
+}

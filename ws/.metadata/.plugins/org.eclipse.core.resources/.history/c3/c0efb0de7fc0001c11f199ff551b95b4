@@ -1,0 +1,20 @@
+package person.main;
+
+import person.obj.Person;
+
+public class PersonMain {
+
+	public static void main(String[] args) {
+
+		System.out.println("PersonMain 클래스의 main 메소드 호출");
+		System.out.println("====================================");
+		
+		//Person 클래스를 이용해서 객체 생성
+		Person p1 = new Person();
+		
+		System.out.println(p1);
+		
+		
+	}
+
+}

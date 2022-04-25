@@ -1,0 +1,18 @@
+package cafe.main;
+
+import cafe.employee.CounterEmp;
+import cafe.employee.KitchenEmp;
+
+public class Run {
+
+	public static void main(String[] args) {
+		
+		System.out.println("--cafe--");
+		
+		CounterEmp ce = new CounterEmp();
+
+		KitchenEmp ke = new KitchenEmp();
+		
+	}
+
+}

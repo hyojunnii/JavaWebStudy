@@ -1,0 +1,25 @@
+package com.kh.overload.test;
+
+public class Test {
+	
+	//기본 생성자
+	public Test() {
+		this.name = "심원용";
+	}
+	
+	//생성자 오버로딩
+	
+		
+	//data
+	public String name;
+	
+	// 오버로딩
+	public void hi() {
+		System.out.println("hi");
+	}
+	
+	public void hi(String str) {
+		System.out.println("hi" + name);
+	}
+	
+}

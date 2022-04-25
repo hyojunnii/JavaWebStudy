@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="chap01print.PrintTest"/>
+    <fullyQualifiedTypeName name="chap02var.VarTest"/>
+    <fullyQualifiedTypeName name="chap03oper.OperTest"/>
+    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+    <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+    <fullyQualifiedTypeName name="method01.MyClass"/>
+    <fullyQualifiedTypeName name="method02.MyClass"/>
+    <fullyQualifiedTypeName name="method02.MyClass02"/>
+    <fullyQualifiedTypeName name="practice.Practice"/>
+    <fullyQualifiedTypeName name="practice.MyClass01"/>
+    <fullyQualifiedTypeName name="cafe.employee.KitchenEmp"/>
+    <fullyQualifiedTypeName name="updown.main.GameManager"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="updown.main.GameManagerUpDown"/>
+    <fullyQualifiedTypeName name="rcp.main.GameManagerRcp"/>
+    <fullyQualifiedTypeName name="person.obj.Person"/>
+    <fullyQualifiedTypeName name="mcdonald.emp.CounterEmp"/>
+    <fullyQualifiedTypeName name="mcdonald.emp.CookEmp"/>
+    <fullyQualifiedTypeName name="mcdonald.emp.RiderEmp"/>
+    <fullyQualifiedTypeName name="com.kh.kfc.obj.Menu"/>
+    <fullyQualifiedTypeName name="com.kh.kfc.obj.MenuHamburger"/>
+    <fullyQualifiedTypeName name="com.kh.kfc.obj.MenuBeverage"/>
+    <fullyQualifiedTypeName name="com.kh.kfc.obj.MenuSide"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.standard.PrinterMoreInfo"/>
+    <fullyQualifiedTypeName name="com.kh.kfc.main.Main"/>
+    <fullyQualifiedTypeName name="com.kh.overload.test.Test"/>
+    <fullyQualifiedTypeName name="com.kh.main.Pikachu"/>
+    <fullyQualifiedTypeName name="com.kh.main.Charmander"/>
+    <fullyQualifiedTypeName name="com.kh.main.Kkobuki"/>
+    <fullyQualifiedTypeName name="animalCrossing.game.ResidentInfo"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="javax.security.sasl.SaslException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="animalCrossing.game.MakeMoneyTool"/>
+    <fullyQualifiedTypeName name="animalCrossing.main.Main"/>
+    <fullyQualifiedTypeName name="animalCrossing.game.MakeMoney"/>
+</qualifiedTypeNameHistroy>

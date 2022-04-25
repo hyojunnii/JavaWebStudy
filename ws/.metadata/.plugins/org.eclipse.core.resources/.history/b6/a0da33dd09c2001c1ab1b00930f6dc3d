@@ -1,0 +1,23 @@
+package com.kh.main;
+
+public class Pikachu {
+	
+	//데이터
+	public int level;
+	public char type; //L,W,F
+	
+	//동작
+	public void bodyAttack() {
+		System.out.println("몸통박치기 !!!");
+	}
+
+	public void millionVolt() {
+		System.out.println("백만볼트 ~~!!");
+	}
+	
+	public void thunderVolt() {
+		System.out.println("썬더볼트 ~~!!");
+	}
+	
+	
+}

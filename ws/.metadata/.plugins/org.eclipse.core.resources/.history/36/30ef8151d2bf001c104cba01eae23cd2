@@ -1,0 +1,26 @@
+package rcp.main;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class GameManagerRcp {
+
+	public final String gameName = "가위바위보";
+	
+	public void gameStart() {
+		System.out.println(gameName + " 게임시작");
+	
+		int comNum = new Random().nextInt(2) + 1;
+		String com = "";
+		
+		switch(comNum) {
+		case 1 : com = "가위"; break;
+		case 2 : com = "바위"; break;
+		case 3 : com = "보"; break;
+		}
+
+		Scanner sc = new Scanner(System.in);
+		int r = sc.next();
+	}
+	
+}

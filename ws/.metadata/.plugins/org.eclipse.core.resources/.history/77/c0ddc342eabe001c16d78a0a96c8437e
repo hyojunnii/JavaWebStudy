@@ -1,0 +1,12 @@
+package method01;
+
+public class MyClass {
+
+	public void test() {
+		
+	}
+	
+	
+	
+	
+}

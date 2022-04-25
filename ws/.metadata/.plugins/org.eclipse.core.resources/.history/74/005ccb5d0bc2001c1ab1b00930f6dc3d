@@ -1,0 +1,30 @@
+package com.kh.main;
+
+public class Kkobuki {
+
+	// 데이터
+	private int level;
+	private char type; // L,W,F
+	
+	public int getLevel() {
+		return this.level;
+	}
+	
+	public void setLevel(int level) {
+		this.level = level;
+	}
+	
+	// 동작
+	public void bodyAttack() {
+		System.out.println("몸통박치기 !!!");
+	}
+
+	public void waterCanon() {
+		System.out.println("물대포 ~~!!");
+	}
+
+	public void bubble() {
+		System.out.println("거품세례 ~~!!");
+	}
+
+}

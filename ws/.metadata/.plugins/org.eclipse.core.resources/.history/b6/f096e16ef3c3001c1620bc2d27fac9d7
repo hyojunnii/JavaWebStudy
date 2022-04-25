@@ -1,0 +1,20 @@
+package animalCrossing.game;
+
+public class ResidentInfo {
+	
+	public ResidentInfo(String player) {
+		this.player = player;
+	}
+	
+	//ตฅภฬลอ
+	private String player;
+	
+	public String getPlayer() {
+		return this.player;
+	}
+	
+	public String setPlayer(String player) {
+		this.player = player;
+	}
+	
+}

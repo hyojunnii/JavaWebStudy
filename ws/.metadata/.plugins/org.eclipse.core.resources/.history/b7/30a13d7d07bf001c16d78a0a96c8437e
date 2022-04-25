@@ -1,0 +1,13 @@
+package practice;
+
+public class Practice {
+
+	public void test() {
+		System.out.println("practice");
+	}
+
+	public void printHelloWorld() {
+		System.out.println("hello world");
+	}
+
+}

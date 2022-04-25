@@ -1,0 +1,14 @@
+package method02;
+
+public class MyClass02 {
+	
+	// ¸Þ¼Òµå (method)
+	
+	public void test() {
+		System.out.println("zzzz");
+		
+		
+		
+	}
+	
+}

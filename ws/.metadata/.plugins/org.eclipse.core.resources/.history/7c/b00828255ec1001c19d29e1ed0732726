@@ -1,0 +1,9 @@
+package com.kh.overload.test;
+
+public class Test {
+
+		public void hi() {
+			System.out.println("hi");
+		}
+		
+}

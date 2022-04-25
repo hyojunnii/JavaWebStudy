@@ -1,0 +1,11 @@
+package practice;
+
+public class MyClass01 {
+	
+	//객체 생성, 메소드 호출
+	public void myMethod01() {
+		System.out.println("MyClass01 의 myMethod01 호출");
+		
+	}
+	
+}

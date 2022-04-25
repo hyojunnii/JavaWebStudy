@@ -1,0 +1,16 @@
+package mcdonald.emp;
+
+public class CookEmp {
+	
+	String name;
+	int money;
+	
+	public void cook(String ham) {
+		System.out.println(ham + " 요리하기");
+	}
+	
+	public void clean() {
+		System.out.println("설거지");
+	}
+	
+}
