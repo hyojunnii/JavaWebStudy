@@ -1,0 +1,20 @@
+package com.kh.random;
+
+public class RandomTest {
+
+	public void test() {
+		
+		//·£´ý ¼ýÀÚ »Ì±â
+		
+		 java.util.Random r = new java.util.Random();
+		
+		 int randomInt = r.nextInt(5);
+		 System.out.println(randomInt);
+		 
+		 //nextInt
+		 //nextBoolean
+		 //nextFloat
+		 //nextDouble
+	}
+	
+}

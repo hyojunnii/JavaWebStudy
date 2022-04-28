@@ -14,7 +14,7 @@ public class MakeMoney {
 		System.out.println("과일을 따서 팔아보자!");
 		System.out.println();
 		System.out.println("---------- 게임 방법 ----------");
-		System.out.println("사과는 한 개에 2000원에 팔리고 있다.");
+		System.out.println("사과는 한 개에 1000원에 팔리고 있다.");
 		System.out.println("따고싶은 갯수만큼 알파벳 'o'를 입력해보자! ▼");
 		
 		while(true) {
@@ -24,7 +24,7 @@ public class MakeMoney {
 				
 				System.out.println();
 				System.out.println(apple.length() + "개를 땄다!");
-				this.money = (apple.length() * 2000);
+				this.money = (apple.length() * 1000);
 				System.out.println(this.money + "원을 벌었다!");
 				
 				//// 전체 누적 하는법 ㅜㅜㅜㅜㅜ Main가면 리셋됨

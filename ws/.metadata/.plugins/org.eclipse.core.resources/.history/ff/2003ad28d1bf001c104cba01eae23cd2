@@ -1,9 +1,0 @@
-package rcp.main;
-
-public class GameManagerRcp {
-
-	public void gameStart() {
-		System.out.println("게임시작");
-	}
-	
-}

@@ -1,8 +1,0 @@
-package updown.main;
-
-public class GameManager {
-
-	public void gameStart() {
-		System.out.println("게임시작");
-	}
-}

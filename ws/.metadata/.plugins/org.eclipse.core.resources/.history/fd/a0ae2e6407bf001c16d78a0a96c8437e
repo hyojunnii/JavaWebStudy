@@ -1,8 +1,0 @@
-package practice;
-
-public class Practice {
-
-	public void test() {
-		System.out.println("D");
-	}
-}

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="chap01print.PrintTest"/>
     <fullyQualifiedTypeName name="chap02var.VarTest"/>
     <fullyQualifiedTypeName name="chap03oper.OperTest"/>
@@ -13,7 +12,6 @@
     <fullyQualifiedTypeName name="practice.MyClass01"/>
     <fullyQualifiedTypeName name="cafe.employee.KitchenEmp"/>
     <fullyQualifiedTypeName name="updown.main.GameManager"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="updown.main.GameManagerUpDown"/>
     <fullyQualifiedTypeName name="rcp.main.GameManagerRcp"/>
     <fullyQualifiedTypeName name="person.obj.Person"/>
@@ -37,4 +35,27 @@
     <fullyQualifiedTypeName name="animalCrossing.game.MakeMoneyTool"/>
     <fullyQualifiedTypeName name="animalCrossing.main.Main"/>
     <fullyQualifiedTypeName name="animalCrossing.game.MakeMoney"/>
+    <fullyQualifiedTypeName name="com.kh.car.RedCar"/>
+    <fullyQualifiedTypeName name="com.kh.car.GreenCar"/>
+    <fullyQualifiedTypeName name="com.kh.car.WhatCar"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="main.RedCar"/>
+    <fullyQualifiedTypeName name="main.GreenCar"/>
+    <fullyQualifiedTypeName name="main.WhatCar"/>
+    <fullyQualifiedTypeName name="main.Run"/>
+    <fullyQualifiedTypeName name="vo.Person"/>
+    <fullyQualifiedTypeName name="com.kh.object.ObjectTest"/>
+    <fullyQualifiedTypeName name="com.kh.string.StringOtherTest"/>
+    <fullyQualifiedTypeName name="com.kh.math.MathTest"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="com.kh.wrapper.WrapperTest"/>
+    <fullyQualifiedTypeName name="com.kh.random.RandomTest"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="main.Person"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="main.Test"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>
