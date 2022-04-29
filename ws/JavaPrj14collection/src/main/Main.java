@@ -11,6 +11,8 @@ public class Main {
 		t.testList();
 		t.testSet();
 		t.testMap();
+		t.testStack();
+		t.testQueue();
 		
 	}//main
 
