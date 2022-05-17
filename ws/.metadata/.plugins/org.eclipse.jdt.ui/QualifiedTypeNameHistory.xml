@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.kh.main.Kkobuki"/>
-    <fullyQualifiedTypeName name="animalCrossing.game.ResidentInfo"/>
-    <fullyQualifiedTypeName name="javax.security.sasl.SaslException"/>
-    <fullyQualifiedTypeName name="animalCrossing.game.MakeMoneyTool"/>
     <fullyQualifiedTypeName name="animalCrossing.main.Main"/>
     <fullyQualifiedTypeName name="animalCrossing.game.MakeMoney"/>
     <fullyQualifiedTypeName name="com.kh.car.RedCar"/>
@@ -20,7 +16,6 @@
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="com.kh.wrapper.WrapperTest"/>
     <fullyQualifiedTypeName name="com.kh.random.RandomTest"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="main.Person"/>
     <fullyQualifiedTypeName name="main.Test"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
@@ -43,12 +38,10 @@
     <fullyQualifiedTypeName name="java.net.InetAddress"/>
     <fullyQualifiedTypeName name="java.net.Socket"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
-    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="java.io.OutputStream"/>
     <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
     <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
@@ -56,8 +49,15 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.security.KeyStore.Entry"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="menu.Menu"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="member.MemberController"/>
+    <fullyQualifiedTypeName name="game.GameManager"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="util.InputUtil"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
 </qualifiedTypeNameHistroy>

@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class MakeMoney {
 
 	ResidentInfo userInfo = new ResidentInfo();
-	MakeMoneyTool moneyTool = new MakeMoneyTool();
-
 		
 	Scanner sc = new Scanner(System.in);
 	
@@ -29,9 +27,9 @@ public class MakeMoney {
 				money = (apple.length() * 1000);
 				System.out.println(money + "벨을 벌었다!");
 				
-				moneyTool.totalMoney = moneyTool.totalMoney + money;
+				MakeMoneyTool.totalMoney = MakeMoneyTool.totalMoney + money;
 				System.out.println("-------------------------------");
-				System.out.println("현재 잔액 : " + moneyTool.totalMoney + "벨");
+				System.out.println("현재 잔액 : " + MakeMoneyTool.totalMoney + "벨");
 				
 				System.out.println();
 				System.out.println("더 따시겠습니까? 1. 예 2. 아니오 ▼");
@@ -84,11 +82,11 @@ public class MakeMoney {
 			System.out.println("총 " + rTotal + "벨입니다.");
 			System.out.println();
 			System.out.println("-------------------------------");
-			System.out.println("현재 잔액은 " + moneyTool.totalMoney + "벨 입니다.");
+			System.out.println("현재 잔액은 " + MakeMoneyTool.totalMoney + "벨 입니다.");
 			System.out.println("구매하시겠습니까? 1. 예 2. 아니오 ▼");
 			int yesNo = sc.nextInt();
 			if (yesNo == 1) {
-				if (moneyTool.totalMoney - rTotal < 0) {
+				if (MakeMoneyTool.totalMoney - rTotal < 0) {
 					System.out.println("잔액이 부족합니다.");
 					System.out.println();
 					System.out.println("수량을 다시 입력하시겠습니까? 1. 예 2. 아니오 ▼");
@@ -99,8 +97,8 @@ public class MakeMoney {
 						return 0;
 					}
 				} else {
-					moneyTool.totalMoney = moneyTool.totalMoney - rTotal;
-					System.out.println("남은 잔액 : " + moneyTool.totalMoney + "벨 입니다.");
+					MakeMoneyTool.totalMoney = MakeMoneyTool.totalMoney - rTotal;
+					System.out.println("남은 잔액 : " + MakeMoneyTool.totalMoney + "벨 입니다.");
 					numRadish = num;
 					break;
 				}

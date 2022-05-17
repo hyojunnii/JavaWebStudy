@@ -8,24 +8,36 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Set hs = new HashSet<Integer>();
+		Set set = new HashSet<Integer>();
 		
 		for (int i = 0; i < 11; i++) {
-			hs.add(i);
+			set.add(i);
 		}
+		System.out.println(set.contains(8));
 		
-//		for (int i = 0; i < hs.size(); i++) {
+//		for (int i = 0; i < set.size(); i++) {
 //			System.out.println(i);
 //		}
-
-		Iterator<Integer> iter = hs.iterator();
+		
+		//iterator
+		Iterator<Integer> iter = set.iterator();
+		
+//		while(true) {
+//			if(!iter.hasNext()) {
+//				break;
+//			}
+//			
+//			if(iter.hasNext()) {
+//				int result = iter.next();
+//				System.out.println(result);
+//			}
+//		}
 		
 		while(iter.hasNext()) {
 			int result = iter.next();
 			System.out.println(result);
 		}
 		
-		System.out.println(hs.contains(8));
 		
 	}
 

@@ -1,5 +1,6 @@
 package map;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -10,15 +11,15 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Map hm = new HashMap<String, Integer>();
+		Map map = new HashMap<String, Integer>();
 		
-		hm.put("¿œ", 1);
-		hm.put("¿Ã", 2);
-		hm.put("ªÔ", 3);
-		hm.put("ªÁ", 4);
-		hm.put("ø¿", 5);
+		map.put("¿œ", 1);
+		map.put("¿Ã", 2);
+		map.put("ªÔ", 3);
+		map.put("ªÁ", 4);
+		map.put("ø¿", 5);
 		
-		Set<Map.Entry<String, Integer>> es = hm.entrySet();
+		Set<Map.Entry<String, Integer>> es = map.entrySet();
 		// Map.Entry == Entry
 		
 		Iterator<Entry<String, Integer>> iter = es.iterator();
@@ -29,12 +30,25 @@ public class Main {
 			System.out.println(x.getValue());
 		}
 		
-		System.out.println(hm.get("ªÔ"));
+//		System.out.println(map.get("ªÔ"));
+//		
+//		System.out.println(map.keySet());
+//		System.out.println(map.values());
+//		System.out.println(map.entrySet());
 		
-		System.out.println(hm.keySet());
-		System.out.println(hm.values());
-		System.out.println(hm.entrySet());
+//		Collection<Integer> vvv = map.values(); //iterator∑Œ ∫Ø»Ø ∞°¥…
+//		System.out.println(vvv);
 		
+//		int result = map.get("¿œ");
+//		System.out.println(result);
+		
+		Iterator<String> it = map.keySet().iterator();
+		
+		while(it.hasNext()) {
+			String k = it.next();
+			System.out.print(k + " : ");
+			System.out.println(map.get(k));
+		}
 	}
 
 }
