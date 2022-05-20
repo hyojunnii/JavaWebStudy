@@ -13,7 +13,7 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 					
 		/*
-		 * 돈벌어요 동물의 숲
+		 * 돈벌러가요 동물의 숲
 		 * 
 		 * 1. 주민대표 이름 정하기 
 		 * 
@@ -29,7 +29,7 @@ public class Main {
 		MakeMoneyTool moneyTool = new MakeMoneyTool();
 		
 		
-		System.out.println("====== 돈벌어요 동물의숲 ======");
+		System.out.println("====== 돈벌러가요 동물의숲 ======");
 		System.out.println();
 		System.out.println("만나서 반가워구리! Hook.Int 사장 너굴이야구리");
 		System.out.println("일을 하러 왔구나!!");
@@ -44,30 +44,25 @@ public class Main {
 		System.out.println();
 		
 		//돈 벌기
-		do {
-			moneyTool.moneyTool();
-			System.out.println("게임을 그만두었습니다.");
-			System.out.println("-------------------------------");
+		moneyTool.moneyTool();
+		
+		while(true) {
+			System.out.println();
+			System.out.println("-------------메뉴--------------");
 			System.out.println("1. 다시 벌기 2. 잔액보기 3. 종료하기");
 			int stop = sc.nextInt();
 			
 			if (stop == 1) {
-				
-				continue;
-				
+				moneyTool.moneyTool();
 			} else if (stop == 2) {
-				
-				System.out.println("현재 잔액은 " + moneyTool.totalMoney + "벨 입니다.");
-				
+				System.out.println();
+				System.out.println("현재 잔액은 " + MakeMoneyTool.totalMoney + "벨 입니다.");
+				continue;
 			} else {
 				break;
 			}
-			
-		} while(true);
-		
-	}
-		
-		
+		}
+	}		
 } //CLASS
 
 

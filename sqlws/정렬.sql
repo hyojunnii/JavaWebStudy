@@ -1,0 +1,12 @@
+-- 정렬하기
+SELECT *
+FROM EMP
+ORDER BY SAL ASC -- 오름차순
+--ORDER BY SAL DESC -- 내림차순
+;
+
+SELECT *
+FROM EMP
+WHERE SAL >= 1000
+ORDER BY SAL ASC, ENAME DESC -- 여러 칼럼을 이용하여 정렬 가능
+;

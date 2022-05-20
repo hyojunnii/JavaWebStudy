@@ -22,9 +22,11 @@ public class MakeMoneyTool {
 		if(c == 1) {
 			makeMoney.sellFruit();
 			System.out.println("현재 잔액은 " + totalMoney + "벨 입니다.");
+			System.out.println("게임을 그만두었습니다.");
 		} else if (c == 2) {
 			totalMoney = totalMoney + makeMoney.radishStock();
 			System.out.println("현재 잔액은 " + totalMoney + "벨 입니다.");
+			System.out.println("게임을 그만두었습니다.");
 		} else {
 			System.out.println("다시 입력해줘!");
 		}
