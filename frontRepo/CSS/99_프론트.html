@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>연습</title>
+    <style>
+      #menubar {
+        background-color: lightgray;
+        width: 200px;
+        height: 200px;
+      }
+
+      #menubar:hover {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>환영합니다 ~</h1>
+    <div id="menubar">여기는 메뉴바</div>
+
+    <script>
+      console.log("hello world");
+      // var input = prompt();
+      // alert(input);
+      // var d = document.querySelector("#menubar");
+      // var d = document.getElementById("menubar");
+      var d = document.getElementsByTagName("div")[0];
+      console.log(d);
+
+      d.addEventListener("click", fun01);
+
+      function fun01() {
+        alert("함수 01 호출");
+        d.style.backgroundColor = "skyblue";
+      }
+    </script>
+  </body>
+</html>

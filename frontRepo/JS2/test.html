@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        width: 500px;
+        height: 280px;
+      }
+
+      input {
+        width: 250px;
+        margin: 3px 20px;
+      }
+
+      input[name="content"] {
+        height: 140px;
+      }
+
+      #submit {
+        display: block;
+        width: auto;
+        margin: 20px 120px;
+      }
+
+      label {
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+
+      #file {
+        margin-left: -2px;
+      }
+
+      input[name="uploadFile"] {
+        margin-left: 4px;
+      }
+
+      table {
+        border: 1px solid black;
+      }
+      td {
+        border: 1px solid black;
+      }
+
+      td {
+        background-color: lightyellow;
+        padding: 2px;
+      }
+
+      #info-footer > td,
+      #info-header > td {
+        background-color: lightsalmon;
+        color: white;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      #info-header > td {
+        height: 30px;
+      }
+
+      .content > td:first-child {
+        width: 35px;
+      }
+
+      .content > td:nth-child(2) {
+        width: 350px;
+      }
+
+      .content > td:nth-child(4),
+      .content > td:nth-child(5) {
+        width: 110px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>포트폴리오 문제</h1>
+    <hr />
+    <br />
+
+    <fieldset>
+      <legend>공지사항 작성하기</legend>
+      <form action="insert.no" method="post">
+        <label for="제목">제목</label><input type="text" name="title" required placeholder="제목을 입력하시오." />
+        <br />
+        <label for="내용">내용</label><input type="text" name="content" required placeholder="내용을 입력하시오." />
+        <br />
+        <label id="file" for="첨부파일">첨부파일</label><input type="file" name="uploadFile" />
+        <input id="submit" type="submit" value="작성하기" />
+      </form>
+    </fieldset>
+
+    <br />
+    <hr />
+    <br />
+
+    <table>
+      <tr id="info-header">
+        <td>번호</td>
+        <td colspan="2">제목</td>
+        <td>작성자</td>
+        <td>작성일</td>
+        <td>조회수</td>
+      </tr>
+      <tr class="content">
+        <td>9</td>
+        <td>공지사항 제목 9</td>
+        <td><button>바로가기</button></td>
+        <td>user01</td>
+        <td>2021-03-29</td>
+        <td>34</td>
+      </tr>
+      <tr class="content">
+        <td>6</td>
+        <td>공지사항 제목 6</td>
+        <td><button>바로가기</button></td>
+        <td>answ445</td>
+        <td>2021-03-12</td>
+        <td>67</td>
+      </tr>
+      <tr class="content">
+        <td>3</td>
+        <td>공지사항 제목 3</td>
+        <td><button>바로가기</button></td>
+        <td>testg12</td>
+        <td>2021-03-01</td>
+        <td>98</td>
+      </tr>
+      <tr class="content">
+        <td>2</td>
+        <td>공지사항 제목 2</td>
+        <td><button>바로가기</button></td>
+        <td>palwe3</td>
+        <td>2021-01-02</td>
+        <td>85</td>
+      </tr>
+      <tr class="content">
+        <td>1</td>
+        <td>공지사항 제목 1</td>
+        <td><button>바로가기</button></td>
+        <td>xml23</td>
+        <td>2020-12-24</td>
+        <td>124</td>
+      </tr>
+      <tr id="info-footer">
+        <td colspan="4">전체공지사항 갯수</td>
+        <td colspan="2">5개</td>
+      </tr>
+    </table>
+  </body>
+</html>

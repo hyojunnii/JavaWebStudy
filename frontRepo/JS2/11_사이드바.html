@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>사이드바</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .sidebar {
+        background-color: yellow;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        width: 150px;
+        margin-left: -150px;
+        transition: margin-left 300ms linear;
+      }
+
+      .sidebar.active {
+        margin-left: 0px;
+      }
+
+      .container {
+        background-color: lightgray;
+        position: absolute;
+        margin-left: 0px;
+        transition: margin-left 300ms linear;
+      }
+
+      .sidebar.active + .container {
+        margin-left: 150px;
+      }
+    </style>
+
+    <script>
+      //.sidebar에 .active 추가||제거
+      // == 토글
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.classList.toggle("active");
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <aside class="sidebar">사이드바</aside>
+      <section class="container">
+        <button onclick="toggleSidebar()">&#8801;</button>
+      </section>
+    </main>
+  </body>
+</html>

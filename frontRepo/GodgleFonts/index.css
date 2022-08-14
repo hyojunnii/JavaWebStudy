@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Dokdo&family=Gamja+Flower&family=Hi+Melody&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Single+Day&family=Sunflower&family=Yeon+Sung&display=swap');
+body {
+font-family: 'Noto Sans', 'Nanum Gothic', sans-serif;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.g-header {
+    background: white;
+    z-index: 100;
+}
+
+nav {
+    height: 80px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    top: 0px;
+    padding: 10px 5% 0px;
+    display: block;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+#main {
+    font-size: 30px;
+    font-weight: 900;
+    color:royalblue;
+}
+
+nav img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 8px;
+}
+
+nav ul{
+    float: right;
+    margin: 0px;
+    height: 60px;
+}
+
+
+nav ul li{
+    display: inline-block;
+    padding: 25px 25px;
+    position: relative;
+    top: -18px;
+}
+
+nav ul li:hover {
+    color:cornflowerblue;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+
+.nav-icon {
+    top: -12px;
+}
+
+#Fonts {
+    background-color: rgba(198, 233, 255, 0.1);
+    border-bottom: 2px solid blue;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    font-weight: 500;
+    color: blue;
+}
+
+nav hr {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.search-bar {
+    margin: 0px 5%;
+    width: 90%;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 2em;
+    top: 100px;
+    position: fixed;
+    background: white;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.search-bar div {
+    display: inline-block;
+}
+
+.search-bar-input {
+    width: 90%;
+    margin-left: 3%;
+    margin-top: 14px;
+    position: absolute;
+}
+
+.search-bar-input span {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 25px;
+}
+
+.search-bar-input input {
+    border: none;
+    font-size: 18px;
+    position: relative;
+    top: -7px;
+    left: 5px;
+    padding: 8px 0px;
+}
+
+.search-bar-input input:focus {
+    outline: none;
+}
+
+.search-bar-reset {
+    float: right;
+}
+
+.search-bar-reset button {
+    border: none;
+    background-color: white;
+    position: relative;
+    right: 20px;
+    top: 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.search-bar-reset button:hover {
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+
+.all-fonts {
+    margin: 200px 5% 0px;
+    width: 100%;
+    font-size: 0px;
+    z-index: 1;
+}
+
+.fonts {
+    font-size: 15px;
+    padding: 20px;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+    height: 300px;
+    width: 44%;
+    margin: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.fonts:hover {
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.05);
+    transform: scale(1.01);
+    z-index: 1;
+}
+
+.font-header span:nth-child(2) {
+    float: right;
+    font-size: 14px;
+}
+
+.font {
+    margin-top: 30px;
+    font-size: 27px;
+}
+
+#font1 {font-family: 'Nanum Gothic', sans-serif;}
+#font2 {font-family: 'Nanum Myeongjo', serif;}
+#font3 {font-family: 'Single Day', cursive;}
+#font4 {font-family: 'Hi Melody', cursive;}
+#font5 {font-family: 'Dokdo', cursive;}
+#font6 {font-family: 'Sunflower', sans-serif;}
+#font7 {font-family: 'Yeon Sung', cursive;}
+#font8 {font-family: 'Black Han Sans', sans-serif;}
+#font9 {font-family: 'Do Hyeon', sans-serif;}
+#font10 {font-family: 'Gamja Flower', cursive;}
+
+#font_3 {
+    position: relative;
+    top: 8px;
+}
+
+#font_5 {
+    position: relative;
+    top: 7px;
+}
+
+#font_6 {
+    position: relative;
+    top: 12px;
+}
+
+#font_7 {
+    position: relative;
+    top: -12px;
+}
+
+#font_8 {
+    position: relative;
+    top: 16px;
+}
+
+#font_info {
+    margin: -14px 5% 0px;
+    position: absolute;
+    width: 90%;
+    z-index: 1;
+}
+
+#font_num {
+    font-size: 13px;
+    padding-left: 2%;
+}
+
+#font_position {
+    float: right;
+}
+
+#font_form {
+    display: inline-block;
+    position: relative;
+    top: -20px;
+    margin: 0px 6px;
+}
+
+select {
+    border: none;
+    font-family: inherit;
+    padding: 0px 10px;
+    font-size: 13px;
+}
+
+select:focus {
+    outline: none;
+    /* background-color: royalblue; */
+}
+
+#font_position {
+    font-size: 13px;
+}

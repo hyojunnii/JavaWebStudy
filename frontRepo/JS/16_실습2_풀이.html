@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>실습2_풀이</h1>
+
+    <input type="text" name="num1">
+    +
+    <input type="text" name="num2">
+    =
+    <input type="text" name="result">
+    <br>
+    <button onclick="calc();">계산</button>
+
+    <script>
+        function calc(){
+            // num1 가져오기, num2 가져오기
+            var num1 = document.querySelector('input[name=num1]').value;
+            var num2 = document.querySelector('input[name=num2]').value;
+            // 두 숫자 더하기
+            var result = parseInt(num1) + parseInt(num2);
+            // 결과창에 결과 보여주기
+            document.querySelector('input[name=result]').value = result;
+        }
+    </script>
+
+</body>
+</html>

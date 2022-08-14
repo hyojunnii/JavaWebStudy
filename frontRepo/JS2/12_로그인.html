@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>로그인</title>
+    <style>
+      span {
+        color: blue;
+      }
+    </style>
+    <script>
+      const id = document.getElementById("id");
+      const idSpan = document.getElementById("idSpan");
+      const pwd = document.getElementById("pwd");
+      const pwdSpan = document.getElementById("pwdSpan");
+      const pwdSpanCondition = document.getElementById("pwdSpanCondition");
+      const pwdCheck = document.getElementById("pwdCheck");
+      const pwdCheckSpan = document.getElementById("pwdCheckSpan");
+
+      pwd.addEventListener("click", function () {
+        pwdSpanCondition.innerText = "비밀번호는 영문자 대소문자 특수문자";
+      });
+
+      id.addEventListener("blur", function () {
+        if (id.value.length > 0) {
+          idSpan.innerText = "";
+        } else {
+          idSpan.innerText = "아이디는 필수 입력사항입니다.";
+        }
+      });
+
+      id.addEventListener("focus", function () {
+        idSpan.innerText = "아이디는 4글자 이상으로 작성해주세요.";
+      });
+    </script>
+  </head>
+  <body>
+    <label>아이디 :</label> <input type="text" id="id" /><br />
+    <span id="idSpan"></span><br />
+    <label>패스워드 :</label> <input type="password" id="pwd" /><br />
+    <span id="pwdSpanCondition"></span><br />
+    <span id="pwdSpan"></span><br />
+    <label>패스워드 확인 :</label> <input type="password" id="pwdCheck" /><br />
+    <span id="pwdCheckSpan"></span><br />
+    <label>이메일 :</label> <input type="email" id="email" /><br />
+  </body>
+</html>

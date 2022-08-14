@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>글꼴관련스타일</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+      html {
+        background-color: lightgray;
+        font-size: 8px;
+      }
+
+      #outer {
+        font-size: 32px;
+        font-weight: 100;
+      }
+
+      span {
+        font-family: "Nanum Gothic", 궁서체, 고딕체;
+
+        font-size: 16px;
+        font-size: 100%;
+        font-size: 2em;
+        font-size: 4rem; /*root : html기준*/
+
+        font-weight: normal;
+        font-weight: lighter;
+        font-weight: 500;
+        font-weight: 900;
+        font-weight: 100; /*100 ~ 900*/
+        font-weight: bold;
+        font-weight: bolder; /*상속값기준*/
+      }
+
+      #outer + span {
+        color: green;
+        font-style: italic;
+        font-style: oblique;
+        font-variant: small-caps;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>글꼴관련스타일</h1>
+    <hr />
+
+    <div id="outer">
+      <span> 안녕하세요 </span>
+    </div>
+
+    <span>hello world</span>
+    <br />
+    <span>HELLO WORLD</span>
+  </body>
+</html>

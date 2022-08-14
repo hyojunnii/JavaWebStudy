@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>배경관련스타일</title>
+    <style>
+      body {
+        background-color: rgba(70, 70, 70, 0.5);
+      }
+
+      .box {
+        width: 50%;
+        height: 100px;
+        background-color: rgba(255, 182, 193, 0.5);
+        padding: 30px;
+        border: 3px solid gray;
+        box-sizing: border-box; /*테두리까지 사이즈지정*/
+      }
+
+      #test {
+        width: 1000px;
+        height: 800px;
+        border: 3px solid aqua;
+        background-image: url(resources/images/image00.png);
+
+        background-repeat: repeat;
+        background-repeat: repeat-x;
+        background-repeat: repeat-y;
+        background-repeat: no-repeat;
+
+        background-size: auto; /*기본값*/
+        /* background-size: contain;
+        background-size: cover;
+        background-size: 1000px 800px;
+        background-size: 50% 50%; */
+
+        /*background-position:좌/우/가운데 위/아래/가운데 | px px | % %*/
+        /*left/right/center top/bottom/center*/
+        background-position: center center;
+        background-position: 500px 400px;
+        background-position: 50% 50%;
+
+        background-attachment: scroll; /*기본값*/
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>배경관련스타일</h1>
+    <hr />
+
+    <p>background ~</p>
+
+    <div class="box" id="target1">1번째요소</div>
+    <div class="box" id="target2">2번째요소</div>
+    <div class="box" id="target3">3번째요소</div>
+    <div class="box" id="target4">4번째요소</div>
+    <div class="box" id="target5">5번째요소</div>
+    <div class="box" id="target6">6번째요소</div>
+    <div class="box" id="target7">7번째요소</div>
+    <div class="box" id="target8">8번째요소</div>
+    <div class="box" id="target9">9번째요소</div>
+    <div class="box" id="target10">10번째요소</div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div id="test"></div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
+</html>

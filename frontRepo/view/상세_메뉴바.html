@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      div {
+        box-sizing: border-box;
+        border: 1px solid red;
+      }
+      #navigator {
+        width: 1000px;
+        height: 40px;
+      }
+      /*위는 안가져감*/
+
+      #navi {
+        list-style-type: none;
+        height: 100%;
+        /*리스트 기본 css 제거*/
+        padding: 0;
+        margin: 0;
+      }
+
+      #navi > li {
+        float: left;
+        width: 15%;
+        height: 100%;
+        text-align: center;
+      }
+
+      #navi a {
+        text-decoration: none;
+        color: orange;
+        font-size: 18px;
+        font-weight: 600;
+        width: 100%;
+        height: 100%;
+        display: block;
+        line-height: 34px;
+      }
+
+      #navi a:hover {
+        color: blue;
+      }
+
+      #navi > li > a:hover + ul {
+        display: block;
+      }
+
+      #navi > li > ul {
+        display: none;
+        width: 100%;
+        padding: 0px;
+      }
+      #navi > li > ul:hover {
+        display: block;
+      }
+      #navi li {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navigator">
+      <ul id="navi">
+        <li><a href="">JAVA</a></li>
+        <li><a href="">SQL</a></li>
+        <li>
+          <a href="">FrontEnd</a>
+          <ul id="sub">
+            <li><a href="">HTML</a></li>
+            <li><a href="">CSS</a></li>
+            <li><a href="">JS</a></li>
+            <li><a href="">jQuery</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">BackEnd</a>
+          <ul id="sub">
+            <li><a href="">JDBC</a></li>
+            <li><a href="">Servlet</a></li>
+            <li><a href="">JSP</a></li>
+            <li><a href="">AJAX</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">FrameWork</a>
+          <ul id="sub">
+            <li><a href="">MYBATIS</a></li>
+            <li><a href="">SPRING</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

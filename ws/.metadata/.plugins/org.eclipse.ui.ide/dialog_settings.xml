@@ -16,6 +16,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\dev\MiniRepo\libraryPrj"/>
+			<item value="D:\dev\220407dev\ws"/>
 			<item value="D:\220407dev\ws\JavaReview\src\temp"/>
 			<item value="D:\220407dev\ws\chatPrjGroup"/>
 			<item value="D:\220407dev\ws\chatPrj"/>

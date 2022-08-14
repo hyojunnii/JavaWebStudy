@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>이벤트</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <h1>이벤트</h1>
+
+    <div id="target">target</div>
+
+    <script>
+      $(function () {
+        const t = $("#target");
+
+        //클릭이벤트1
+        t.click(function () {
+          console.log("클릭이벤트 발생");
+        });
+
+        //더블클릭이벤트
+        t.dblclick(function () {
+          console.log("더블클릭이벤트 발생");
+        });
+
+        //클릭이벤트2
+        t.click(function () {
+          console.log("클릭이벤트 발생22");
+        });
+      });
+    </script>
+
+    <hr />
+
+    <h2 id="target2">안녕</h2>
+
+    <script>
+      $(function () {
+        const t = $("#target2");
+
+        ////클릭 이벤트 걸기
+        //t.on("click", function () {
+        //  console.log("click");
+        //});
+
+        ////마우스엔터 이벤트
+        //t.on("mouseenter", function () {
+        //  console.log("mouseenter");
+        //});
+
+        ////마우스아웃 이벤트
+        //t.on("mouseout", function () {
+        //  console.log("mouseout");
+        //});
+
+        //위의 3개 이벤트 한번에 처리
+        const temp = {
+          click: function () {
+            console.log("click");
+          },
+          mouseenter: function () {
+            console.log("mouseenter");
+          },
+          mouseout: function () {
+            console.log("mouseout");
+          },
+        };
+        t.on(temp);
+
+        //클릭 이벤트 제거
+        t.off("click");
+      });
+    </script>
+
+    <div id="target3">
+      <h1>안녕</h1>
+      <h1>하이</h1>
+    </div>
+
+    <script>
+      $(function () {
+        //target3 자식들한테 이벤트 걸기
+        $("#target3").on("click", "h1, h2", function (event) {
+          console.log(this);
+          console.log(event);
+          console.log(event.target);
+          console.log(event.currentTarget);
+        });
+      });
+    </script>
+
+    <h1 id="target4">테스트</h1>
+
+    <script>
+      //일회용 이벤트 걸기
+      $(function () {
+        $("#target4").one("click", function () {
+          alert("알람발생");
+        });
+      });
+    </script>
+  </body>
+</html>

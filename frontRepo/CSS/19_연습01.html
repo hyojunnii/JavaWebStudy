@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .big-box {
+        width: 205px;
+        height: 204px;
+        border: 5px solid red;
+        box-sizing: border-box;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        box-sizing: border-box;
+        border: 3px solid black;
+      }
+      .main-box {
+        position: relative;
+      }
+      #square2 {
+        border: 5px solid blue;
+        position: absolute;
+        top: 4px;
+        left: 5px;
+      }
+      #square3 {
+        border: 5px solid green;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+      }
+
+      #t {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
+
+      #t td {
+        border: 5px solid blue;
+      }
+
+      .red {
+        background-color: red;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .green {
+        background-color: green;
+      }
+      .purple {
+        background-color: purple;
+      }
+      .orange {
+        background-color: orange;
+      }
+
+      .float-left {
+        float: left;
+      }
+
+      #selector-test:hover {
+        background-color: lightgray;
+      }
+      #selector-test + div {
+        display: none;
+      }
+      #selector-test:hover + div {
+        background-color: skyblue;
+        display: block;
+      }
+
+      #selector-test,
+      #selector-test + div {
+        border-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>테스트</h1>
+    <hr />
+    <br />
+    <div class="main-box">
+      <div class="big-box" id="square1"></div>
+      <div class="box" id="square2"></div>
+      <div class="box" id="square3"></div>
+    </div>
+
+    <br /><br />
+    <hr />
+    <br /><br />
+
+    <table id="t">
+      <tr>
+        <td><div class="box">1</div></td>
+        <td><div class="box">2</div></td>
+      </tr>
+      <tr>
+        <td><div class="box">3</div></td>
+        <td><div class="box">4</div></td>
+      </tr>
+    </table>
+
+    <br /><br />
+    <hr />
+    <br /><br />
+
+    <h2>float</h2>
+    <div class="box red float-left"></div>
+    <div class="box blue float-left"></div>
+    <div class="box green"></div>
+    <div class="box purple"></div>
+    <div class="box orange"></div>
+
+    <br /><br />
+    <hr />
+    <br />
+
+    <h2>선택자</h2>
+    <div class="box" id="selector-test"></div>
+    <div class="box"></div>
+
+    <br /><br /><br /><br /><br />
+  </body>
+</html>

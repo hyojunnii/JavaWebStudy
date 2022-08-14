@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>선택자 우선순위</title>
+
+    <style>
+      div {
+        color: white !important;
+      }
+
+      .temp {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        margin: 10px;
+        color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>선택자 우선순위</h1>
+    <hr />
+
+    <h2>위에서부터 아래로 적용</h2>
+    <pre>
+        같은 요소에 대한 설정이 중복되는 경우,
+        아래쪽 내용이 적용됨
+    </pre>
+
+    <hr />
+
+    <h2>우선순위 비교</h2>
+    <pre>
+        태그선택자 < 클래스선택자 < 아이디선택자 < 인라인스타일방식 < !important 
+    </pre>
+
+    <div id="target1" class="temp">div1</div>
+    <div id="target2" class="temp">div2</div>
+    <div id="target3" class="temp">div3</div>
+    <div id="target4" class="temp">div4</div>
+    <div id="target5" class="temp">div5</div>
+
+    <br /><br />
+  </body>
+</html>

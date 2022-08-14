@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      @keyframes test01 {
+        0% {
+          background-color: red;
+          width: 200px;
+        }
+        50% {
+          background-color: green;
+          width: 400px;
+        }
+        100% {
+          background-color: blue;
+          width: 100px;
+        }
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: gray;
+        animation-name: test01;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        --animation-direction: alternate-reverse;
+        animation-play-state: running;
+        animation-timing-function: cubic-bezier(0, 0.25, 0.75, 1);
+      }
+
+      #stopper:hover + .box {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>애니메이션</h1>
+    <br />
+    <span id="stopper">멈춰</span>
+    <div class="box" id="t2"></div>
+  </body>
+</html>

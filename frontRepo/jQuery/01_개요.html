@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery 개요</title>
+    <!-- <script src="./resources/jquery-3.6.0.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>jQuery 개요</h1>
+
+    <hr />
+
+    <h3>jQuery 란?</h3>
+    <p>
+      JS만 이용해서 구현하기 복잡하고 어려운걸 처리하기 위해 등장 <br />
+      존 레식이 JS를 편하게 사용하라고 만들어놓은 라이브러리 <br />
+      JS를 이용해서 만든 라이브러리 (라이브러리 까보면, 결국 JS) <br />
+      복잡한 JS 구문을 짧고 쉽게 개발 가능
+    </p>
+
+    <hr />
+
+    <h3>jQuery 장점</h3>
+    <p>
+      1) DOM 조작 쉬움 <br />
+      2) AJAX 지원 <br />
+      3) 플러그인, 오픈api 지원 (차트, 슬라이드 등..) <br />
+    </p>
+
+    <hr />
+
+    <h3>jQuery 연결 방법</h3>
+    <p>
+      1) 파일 <br />
+      2) 링크 (CDN 방식) <br />
+      <br />
+      <a href="https://jquery.com" target="_blank">제이쿼리 사이트</a>
+    </p>
+
+    <hr />
+
+    <h3>jQuery 사용해보기</h3>
+    <p>
+      - 로드 끝나고 사용 <br />
+      window.onload는, 요소가 다 로딩되고, 외부문서들도 다 가져온 뒤 실행됨 <br />
+      (한번만 실행가능) <br />
+      (마지막에 넣은 함수만 실행됨) <br />
+    </p>
+
+    <hr />
+
+    <div id="target"></div>
+
+    <script>
+      //window.onload = function () {
+      //  console.log(1111);
+      //};
+
+      //window.onload = function () {
+      //  console.log(2222);
+      //};
+
+      //jQuery(document).ready(function () {
+      //  console.log("제이쿼리 잘 되나요");
+      //});
+
+      //jQuery(document).ready(function () {
+      //  console.log("네~~");
+      //});
+
+      $(function () {
+        console.log("제이쿼리 잘 되나요");
+
+        console.log($("#target")[0]); //jquery는 배열형태로 가져옴
+
+        //const h3 = $("h3");
+        //for (let i = 0; i < h3.length; ++i) {
+        //  h3[i].style.backgroundColor = "red";
+        //}
+
+        $("h3").css("backgroundColor", "red");
+
+        $("#target").css("backgroundColor", "red");
+        $("#target").css("width", "100px");
+        $("#target").css("height", "100px");
+      });
+    </script>
+    <!-- <script src="01_개요.js"></script> -->
+  </body>
+</html>

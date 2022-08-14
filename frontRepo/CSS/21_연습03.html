@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        border: 1px solid red;
+        width: 100px;
+        height: 100px;
+      }
+
+      #t01:hover {
+        background-color: lightblue;
+        width: 100%;
+        transition: 2s;
+        transition-delay: 1s;
+        transition-timing-function: steps(2);
+      }
+
+      #t02:hover {
+        transform: rotate(200deg); /*시계방향 회전*/
+        transform: rotateX(45deg);
+        transform: rotateY(45deg);
+        transition: 2s;
+      }
+
+      #t03:hover {
+        transform: scale(2);
+        transform: scaleX(2);
+        transform: scaleY(2);
+        transform: skew(30deg, 30deg);
+        transform: skewX(30deg, 30deg);
+        transform: skewY(30deg, 30deg);
+        transform: scale(2) skew(30deg) rotate(30deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>트랜지션</h1>
+    <hr />
+    <br />
+
+    <div class="box" id="t01"></div>
+
+    <br />
+    <h1>트랜스폼</h1>
+    <hr />
+    <br />
+
+    <div class="box" id="t02"></div>
+
+    <br />
+    <h1>스케일</h1>
+    <hr />
+    <br />
+
+    <div class="box" id="t03"></div>
+  </body>
+</html>

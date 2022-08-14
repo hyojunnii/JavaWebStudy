@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>요소선택</h1>
+
+    <pre>
+        document.querySelector('선택자');
+        document.querySelectorAll('선택자');
+
+        document.getElementById("아이디");
+        document.getElementsByClassName("클래스명");
+        document.getElementsByTagName("태그명");
+    </pre>
+
+    <div id="target">타겟얖</div>
+
+    <div class="box">1번박스</div>
+    <div class="box">2번박스</div>
+    <div class="box">3번박스</div>
+
+    <input type="text">
+    <input type="password">
+
+    <script>
+        var target = document.querySelector('#target');
+        console.log(target);
+
+        //첫번째 .box 요소
+        var box01 = document.querySelector('.box');
+        var boxArr = document.querySelectorAll('.box');
+        console.log(box01);
+        console.log(boxArr);
+        //input태그 인데, password type 인 요소
+        var inputPwd = document.querySelector('input[type=password]');
+        console.log(inputPwd);
+    </script>
+
+    <script>
+        console.log("=====================");
+        var target = document.getElementById("target");
+        console.log(target);
+
+        var boxArr = document.getElementsByClassName("box");
+        console.log(boxArr);
+
+        var divArr = document.getElementsByTagName('div');
+        console.log(divArr);
+
+    </script>
+</body>
+</html>

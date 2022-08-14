@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>실습</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <h1>실습</h1>
+
+    <table border="1">
+      <tr>
+        <td>글번호</td>
+        <td>제목</td>
+        <td>작성자</td>
+        <td>작성일</td>
+        <td>조회수</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>제목01</td>
+        <td>작성자01</td>
+        <td>220706</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>제목02</td>
+        <td>작성자02</td>
+        <td>220706</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>제목03</td>
+        <td>작성자03</td>
+        <td>220706</td>
+        <td>8</td>
+      </tr>
+    </table>
+
+    <script>
+      $(function () {
+        //클릭하면, 해당 행의 글번호 콘솔에 출력
+        $("tr").click(function () {
+          const no = $(this).children().first().text();
+          if (no !== "글번호") {
+            console.log(no);
+          }
+
+          //행 클릭하면 글번호를 이용하여 url 이동
+          window.location = "https://www.naver.com?no=" + no;
+        });
+      });
+    </script>
+  </body>
+</html>

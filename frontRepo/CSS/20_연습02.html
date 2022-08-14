@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul > li {
+        list-style: none;
+        border: 1px solid blue;
+        float: left;
+        width: 20%;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      ul {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      ul > li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        width: 100%;
+      }
+
+      /*서브메뉴*/
+      ul > li > ul {
+        display: none;
+        height: 50px;
+      }
+
+      ul > li > a:hover + ul {
+        display: block;
+      }
+
+      #nav {
+        width: 80%;
+        height: 5vh;
+        margin: auto;
+      }
+
+      ul > li > ul:hover {
+        display: block;
+      }
+
+      .sub-menu {
+        height: 50px;
+      }
+
+      .sub-menu > li {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <ul>
+        <li>
+          <a href="">111</a>
+          <ul class="sub-menu">
+            <li>1번</li>
+            <li>2번</li>
+            <li>3번</li>
+          </ul>
+        </li>
+        <li>
+          <a href="">222</a>
+          <ul class="sub-menu">
+            <li>1번</li>
+            <li>2번</li>
+            <li>3번</li>
+          </ul>
+        </li>
+        <li><a href="">333</a></li>
+        <li><a href="">444</a></li>
+        <li><a href="">555</a></li>
+      </ul>
+    </div>
+  </body>
+</html>

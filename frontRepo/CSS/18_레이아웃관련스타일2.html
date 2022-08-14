@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>레이아웃관련스타일2</title>
+    <style>
+      .box {
+        border: 1px solid black;
+      }
+
+      #first {
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+      }
+
+      #second {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+      }
+
+      #third {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+      }
+
+      .outer {
+        position: relative;
+        border: 1px solid black;
+      }
+
+      #fixed-area {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* position: fixed; */
+        top: 100px;
+      }
+
+      .z-test {
+        border: 1px solid black;
+        width: 170px;
+        height: 120px;
+        position: absolute;
+      }
+
+      #z1 {
+        background-color: yellow;
+        top: 100px;
+        left: 100px;
+        z-index: 10;
+      }
+      #z2 {
+        background-color: green;
+        top: 50px;
+        left: 50px;
+        z-index: 800;
+      }
+      #z3 {
+        background-color: red;
+        z-index: -10;
+      }
+
+      .vis-test {
+        border: 1px solid red;
+      }
+
+      .float-test {
+        border: 1px solid black;
+        width: 70px;
+        height: 30px;
+        float: right;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>레이아웃관련스타일2</h1>
+    <hr />
+    <h2>배치관련 스타일</h2>
+    <h3>position : 상대위치(relative)와 절대위치(absolute)</h3>
+    <!-- absolute : 부모가 기준점, 공간이동
+         relative : 본인이 기준점, 원래공간두고 실물만이동 -->
+
+    <div class="outer">
+      <div class="box" id="first">1번자식</div>
+      <div class="box" id="second">2번자식</div>
+      <div class="box" id="third">3번자식</div>
+    </div>
+
+    <br /><br />
+    <hr />
+    <h3>position : 고정위치(fixed)</h3>
+    <div class="box" id="fixed-area"></div>
+
+    <h2>z-index : 요소들을 index 값에 따라 쌓는 속성</h2>
+
+    <div class="outer">
+      <div class="z-test" id="z1">1번째요소</div>
+      <div class="z-test" id="z2">2번째요소</div>
+      <div class="z-test" id="z3">3번째요소</div>
+    </div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <hr />
+
+    <h3>visibility : 특정요소를 보이거나 안보이게 하는 스타일 속성</h3>
+    <pre>
+        visibility : hidden은 공간은 차지하지만 안보임
+        display:none : 공간도 사라짐
+    </pre>
+
+    <div class="vis-test" style="width: 100px; height: 100px; background-color: 색상">1번영역</div>
+    <div class="vis-test" style="width: 100px; height: 100px; background-color: 색상; visibility: hidden">2번영역</div>
+    <div class="vis-test" style="width: 100px; height: 100px; background-color: 색상">3번영역</div>
+
+    <br /><br />
+    <hr />
+
+    <h3>float</h3>
+    <p>페이지 내의 요소들을 띄워서 왼쪽 또는 오른쪽으로 배치하는 속성</p>
+
+    <div class="float-test">요소1번</div>
+    <div class="float-test">요소2번</div>
+    <div class="float-test">요소3번</div>
+    <div class="float-test">요소4번</div>
+    <div class="float-test">요소5번</div>
+
+    <br /><br /><br /><br />
+    <div class="box" style="width: 100px; height: 100px; float: left">float된div</div>
+
+    <!-- 남아있는 float속성 지우기 -->
+    <br clear="both" />
+    <div>11</div>
+    <div>22</div>
+    <div>33</div>
+
+    <br /><br /><br />
+  </body>
+</html>

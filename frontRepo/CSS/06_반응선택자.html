@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>반응선택자</title>
+    <style>
+      .area {
+        width: 100px;
+        height: 100px;
+        background-color: lightgreen;
+        margin: 10px;
+        cursor: pointer;
+      }
+      #active-test:active {
+        background-color: lightblue;
+      }
+      #hover-test:hover {
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>반응선택자</h1>
+
+    <hr />
+    <pre>
+        active (마우스 다운), hover (마우스 올라감)
+    </pre>
+
+    <div id="active-test" class="area">active테스트</div>
+    <div id="hover-test" class="area">hover테스트</div>
+  </body>
+</html>

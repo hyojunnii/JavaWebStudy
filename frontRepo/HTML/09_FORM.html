@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FORM TAG</title>
+  </head>
+  <body>
+    <h1>form 태그</h1>
+
+    <hr />
+    <h2>회원가입</h2>
+
+    <pre>
+        form태그
+        action 속성 : 요청을 보낼 주소 (URL)
+        method 속성 : 요청을 보낼 방식
+
+        form 태그는,
+        key, value 쌍으로 묶어서 데이터를 전송
+
+        key는 input태그의 name으로 설정됨
+        value는 input태그에 입력한 값(value)
+    </pre>
+
+    <form action="memberLogin" method="post">
+      아이디 : <input type="text" name="id" value="user000" />
+      <br />
+      패스워드 : <input type="password" name="pwd" required />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

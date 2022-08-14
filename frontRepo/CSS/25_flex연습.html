@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 실습</title>
+    <style>
+      #outer {
+        display: flex;
+        border: 1px solid red;
+        width: 800px;
+        height: 800px;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      #outer > div {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      table {
+        border: 1px solid black;
+      }
+
+      td {
+        border: 1px solid black;
+      }
+
+      .menu > td {
+        background-color: lightsalmon;
+        color: white;
+        text-align: center;
+      }
+
+      .content > td {
+        background-color: lightyellow;
+      }
+      #index {
+        height: 40px;
+      }
+
+      #index > td:nth-child(2) {
+        width: 400px;
+      }
+      #index > td:nth-child(3),
+      #index > td:nth-child(4) {
+        width: 120px;
+      }
+
+      .content > td:nth-child(3) {
+        width: 70px;
+      }
+
+      #board_outer {
+        border: 1px solid black;
+        width: 700px;
+        height: 300px;
+        display: flex;
+        align-items: baseline;
+      }
+
+      form {
+        margin: 3% 0 3% 1%;
+        display: flex;
+        flex-direction: column;
+        width: 330px;
+      }
+
+      form > div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      #board_title > input {
+        width: 250px;
+      }
+
+      #board_content > input {
+        width: 250px;
+        height: 150px;
+        padding-top: 0px;
+      }
+
+      form > div {
+        margin: 3px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      #board_submit {
+        margin-top: 20px;
+      }
+
+      #board_info {
+        font-size: 12px;
+      }
+
+      #board_info > p:nth-child(2) {
+        margin: 77px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outer">
+      <div class="div"><span id="span1">span1</span></div>
+      <div class="div"><span id="span2">span2</span></div>
+      <div class="div"><span id="span3">span3</span></div>
+    </div>
+
+    <br /><br />
+    <hr />
+    <br /><br />
+
+    <table>
+      <tr class="menu" id="index">
+        <td>번호</td>
+        <td colspan="2">제목</td>
+        <td>작성자</td>
+        <td>작성일</td>
+        <td>조회수</td>
+      </tr>
+      <tr class="content">
+        <td>9</td>
+        <td>공지사항 제목 9</td>
+        <td><button>바로가기</button></td>
+        <td>user01</td>
+        <td>2021-03-29</td>
+        <td>34</td>
+      </tr>
+      <tr class="content">
+        <td>6</td>
+        <td>공지사항 제목 6</td>
+        <td><button>바로가기</button></td>
+        <td>answ445</td>
+        <td>2021-03-12</td>
+        <td>67</td>
+      </tr>
+      <tr class="content">
+        <td>3</td>
+        <td>공지사항 제목 3</td>
+        <td><button>바로가기</button></td>
+        <td>testg12</td>
+        <td>2021-03-01</td>
+        <td>98</td>
+      </tr>
+      <tr class="content">
+        <td>2</td>
+        <td>공지사항 제목 2</td>
+        <td><button>바로가기</button></td>
+        <td>palwe3</td>
+        <td>2021-01-02</td>
+        <td>85</td>
+      </tr>
+      <tr class="content">
+        <td>1</td>
+        <td>공지사항 제목 1</td>
+        <td><button>바로가기</button></td>
+        <td>wml23</td>
+        <td>2020-12-24</td>
+        <td>124</td>
+      </tr>
+      <tr class="menu">
+        <td colspan="4">전체공지사항 갯수</td>
+        <td colspan="2">5개</td>
+      </tr>
+    </table>
+
+    <br /><br />
+    <hr />
+    <br /><br />
+
+    <div id="board_outer">
+      <form action="">
+        <div id="board_title">
+          <span>제목</span>
+          <input type="text" name="title" placeholder="제목을 입력하시오." required />
+        </div>
+        <div id="board_content">
+          <span>내용</span>
+          <input type="textarea" name="content" placeholder="내용을 입력하시오." required />
+        </div>
+        <div id="board_files">
+          <span>첨부파일</span>
+          <input type="file" name="uploadFile" />
+        </div>
+        <div id="board_submit">
+          <input type="submit" value="작성하기" />
+        </div>
+      </form>
+      <div id="board_info">
+        <p>*name속성값은 "title"부여, 필수입력사항 속성부여</p>
+        <p>*name속성값은 "content"부여, 필수입력사항 속성부여</p>
+        <p>*name속성값은 "uploadFile"부여</p>
+      </div>
+    </div>
+  </body>
+</html>

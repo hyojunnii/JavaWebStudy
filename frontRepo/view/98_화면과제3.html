@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>화면구조 과제3</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .main-container {
+        width: 1000px;
+        min-height: 700px;
+        margin: auto;
+        font-size: 0px;
+        height: 130px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .box {
+        width: 100%;
+        height: 100%;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+        box-sizing: border-box;
+      }
+
+      .head {
+        height: 130px;
+        text-align: center;
+        flex-direction: row;
+        display: flex;
+      }
+
+      #head-left {
+        width: 100%;
+        flex: 2;
+      }
+      #head-main {
+        text-align: center;
+        width: 100%;
+        flex: 6;
+        border-left: 0px;
+        border-right: 0px;
+      }
+      #head-right {
+        width: 100%;
+        flex: 2;
+      }
+
+      #search {
+        width: 300px;
+        height: 20px;
+      }
+
+      #search-sub {
+        width: 100px;
+        height: 24px;
+        margin: 50px 0px;
+      }
+
+      .menu {
+        height: 40px;
+        border-top: none;
+        border-bottom: none;
+      }
+
+      .menu ul {
+        width: 100%;
+        margin: 0px 20px;
+      }
+
+      .menu ul li {
+        display: inline-block;
+        padding: 7px 30px;
+        list-style: none;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      .menu ul li a {
+        font-size: 18px;
+        color: orange;
+        text-decoration: none;
+      }
+
+      .sub-menu {
+        display: none;
+        height: 50px;
+      }
+
+      .sub-menu li {
+        font-size: 18px;
+        display: list-item;
+      }
+
+      ul > li > a:hover + ul {
+        display: inline;
+      }
+
+      .main {
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+      }
+
+      .info {
+        height: 40px;
+        border-top: none;
+        border-bottom: none;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .info span {
+        display: inline-block;
+        margin-top: 8px;
+        padding: 0px 4px;
+      }
+
+      .info span:first-child {
+        margin-left: 10px;
+      }
+
+      .kh-info {
+        height: 140px;
+        font-size: 12px;
+      }
+
+      .kh-info span {
+        display: block;
+        margin-left: 15px;
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: 500;
+      }
+
+      .kh-info span:first-child {
+        margin-top: 8px;
+      }
+
+      .kh-info span:last-child {
+        text-align: center;
+        margin-top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="head">
+        <div class="box" id="head-left"></div>
+        <div class="box search" id="head-main">
+          <input id="search" type="text" />
+          <input id="search-sub" type="submit" />
+        </div>
+        <div class="box" id="head-right"></div>
+      </div>
+
+      <div class="box menu">
+        <ul>
+          <li><a href="">JAVA</a></li>
+          <li><a href="">SQL</a></li>
+          <li>
+            <a href="">FrontEnd</a>
+            <ul class="sub-menu">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>jQuery</li>
+            </ul>
+          </li>
+          <li><a href="">BackEnd</a></li>
+          <li><a href="">FrameWork</a></li>
+        </ul>
+      </div>
+
+      <div class="main">
+        <div class="box" id="main-left"></div>
+        <div class="box" id="main-main"></div>
+        <div class="box" id="main-right">
+          <input type="text" />
+          <input type="text" />
+          <input type="submit" />
+          <input type="회원가입" />
+          <input type="ID/PWD 찾기" />
+        </div>
+      </div>
+
+      <div class="box info">
+        <span>이용약관</span>
+        <span>|</span>
+        <span>개인정보취급방침</span>
+        <span>|</span>
+        <span>인재채용</span>
+        <span>|</span>
+        <span>고객센터</span>
+      </div>
+
+      <div class="box kh-info">
+        <span>강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F</span>
+        <span>강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F</span>
+        <span>강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F</span>
+        <span>종로지원 : 서울특별시 중구 남대문로 120 대일빌딩 2F, 3F</span>
+        <span>당산지원 : 서울특별시 영등포구 선유동2로 57 이레빌딩 (구관) 19F, 20F</span>
+        <span>Copyright C 1998-2022 KH Information Educational Institute All Right Reserved</span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent-box {
+        font-size: 0px;
+        border: 3px solid red;
+      }
+
+      .box {
+        box-sizing: border-box;
+        border: 3px solid red;
+        display: inline-block;
+      }
+
+      #layout1,
+      #layout2,
+      #layout6 {
+        height: 150px;
+      }
+
+      #layout1 {
+        width: 30%;
+      }
+
+      #layout2 {
+        width: 70%;
+      }
+
+      #layout3,
+      #layout4,
+      #layout5 {
+        height: 500px;
+      }
+
+      #layout3,
+      #layout5 {
+        width: 15%;
+      }
+
+      #layout4 {
+        width: 70%;
+      }
+
+      #layout6 {
+        width: 100%;
+      }
+
+      #lay1,
+      #lay2,
+      #lay3,
+      #lay7 {
+        height: 150px;
+      }
+
+      #lay1 {
+        width: 20%;
+      }
+
+      #lay2 {
+        width: 65%;
+      }
+
+      #lay3 {
+        width: 15%;
+      }
+
+      #lay4,
+      #lay5,
+      #lay6 {
+        height: 500px;
+      }
+
+      #lay4 {
+        width: 15%;
+      }
+
+      #lay5 {
+        width: 65%;
+      }
+
+      #lay6 {
+        width: 20%;
+      }
+
+      #lay7,
+      #lay0 {
+        width: 100%;
+      }
+
+      #lay0 {
+        height: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent-box">
+      <div class="box" id="layout1"></div>
+      <div class="box" id="layout2"></div>
+      <div class="box" id="layout3"></div>
+      <div class="box" id="layout4"></div>
+      <div class="box" id="layout5"></div>
+      <div class="box" id="layout6"></div>
+    </div>
+
+    <br /><br />
+    <hr />
+    <br /><br />
+
+    <div class="parent-box">
+      <div class="box" id="lay1"></div>
+      <div class="box" id="lay2"></div>
+      <div class="box" id="lay3"></div>
+      <div class="box" id="lay0"></div>
+      <div class="box" id="lay4"></div>
+      <div class="box" id="lay5"></div>
+      <div class="box" id="lay6"></div>
+      <div class="box" id="lay7"></div>
+    </div>
+  </body>
+</html>
