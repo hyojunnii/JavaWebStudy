@@ -79,8 +79,7 @@ public class BoardInsertController extends HttpServlet{
 			FileOutputStream os = new FileOutputStream(savePath);
 			BufferedOutputStream bos = new BufferedOutputStream(os);
 			
-			
-			//실제 파일 업로드 
+			//실제 파일 업로드
 			//(느린방식)
 //			int data = 0;
 //			while((data = is.read()) != -1) {

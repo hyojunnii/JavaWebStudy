@@ -48,9 +48,9 @@
     <div id="outer">
       <h1 align="center">게시글 조회</h1>
       <div style="text-align:right; width:95%">
-      	<% if(loginMember != null){ %>
-      		<a class="btn btn-primary" href="<%=contextPath%>/board/insert">글쓰기</a>
-      	<%} %>
+      	<c:if test="${not empty loginMember}">
+      		<a class="btn btn-primary" href="${cp}/board/insert">글쓰기</a>
+      	</c:if>
       </div>
       <table border="1">
         <tr>
@@ -61,16 +61,16 @@
           <th>조회수</th>
           <th>작성일시</th>
         </tr>
-        <% for(BoardVo b : voList) {%>
-        <tr>
-          <td><%=b.getNo() %></td>
-          <td><%=b.getCategory() %></td>
-          <td><%=b.getTitle() %></td>
-          <td><%=b.getContent() %></td>
-          <td><%=b.getCnt() %></td>
-          <td><%=b.getEnrollDate() %></td>
-        </tr>
-        <%} %>
+        <c:forEach items="${list}" var="b">
+	        <tr>
+	          <td>${b.no}</td>
+	          <td>${b.category}</td>
+	          <td>${b.title}</td>
+	          <td>${b.content}</td>
+	          <td>${b.cnt}</td>
+	          <td>${b.enrollDate}</td>
+	        </tr>
+        </c:forEach>
       </table>
       <div id="page-area">
       	<% if(currentPage != 1) {%>

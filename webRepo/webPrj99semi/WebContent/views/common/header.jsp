@@ -6,6 +6,8 @@ session.removeAttribute("alertMsg");
 String contextPath = request.getContextPath(); 
 %>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,6 +16,8 @@ String contextPath = request.getContextPath();
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<c:set value="<%=contextPath%>" var="cp"></c:set>
 
     <style>
       #login-wrap {
