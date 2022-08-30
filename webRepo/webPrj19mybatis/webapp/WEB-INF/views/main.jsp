@@ -8,5 +8,26 @@
 </head>
 <body>
 	<h1>메인</h1>
+	
+	<h2>회원가입</h2>
+	<form action="/mybatis/member/insert" method="post">
+		아이디 : <input type="text" name="userId">
+		<br>
+		비밀번호 : <input type="password" name="userPwd">
+		<br>
+		<input type="submit" value="회원가입">
+	</form>
+	
+	<hr>
+	
+	<h2>로그인</h2>
+	<form action="/mybatis/member/select" method="post">
+		아이디 : <input type="text" name="userId">
+		<br>
+		비밀번호 : <input type="password" name="userPwd">
+		<br>
+		<input type="submit" value="로그인">
+	</form>
+	
 </body>
 </html>
