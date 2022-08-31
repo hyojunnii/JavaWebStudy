@@ -21,11 +21,11 @@
 	 
 	<!-- <insert id="join" parameterType="com.kh.member.co.MemberVo"> -->
 	<insert id="join" parameterType="mvo">
-		INSERT INTO TB_USER (ID, PWD) VALUES (#{userId}, #{userPwd}) <!-- 필드값 -->
+		INSERT INTO TB_USER (ID, PWD) VALUES (#{id}, #{pwd}) <!-- 필드값 -->
 	</insert>
 	
-	<select id="login" parameterType="mvo" resultMap="memberResult">
-		SELECT ID, PWD FROM TB_USER WHERE ID = #{userId} AND PWD = #{userPwd}
+	<select id="login" parameterType="mvo" resultType="mvo"> <!-- resultMap="memberResult"-->
+		SELECT ID, PWD FROM TB_USER WHERE ID = #{id} AND PWD = #{pwd}
 	</select>
 	
 	

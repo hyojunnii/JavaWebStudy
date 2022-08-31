@@ -19,8 +19,8 @@ public class MemberLoginController extends HttpServlet{
 		String userPwd = req.getParameter("userPwd");
 		
 		MemberVo vo = new MemberVo();
-		vo.setUserId(userId);
-		vo.setUserPwd(userPwd);
+		vo.setId(userId);
+		vo.setPwd(userPwd);
 		
 		MemberVo loginMember = new MemberService().login(vo);
 		
