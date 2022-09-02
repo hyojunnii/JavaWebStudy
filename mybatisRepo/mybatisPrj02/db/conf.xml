@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
@@ -10,7 +10,8 @@
   </settings>
   
   <typeAliases>
-  	<typeAlias type="com.kh.mybatis.member.vo.MemberVo" alias="mvo"/>
+  	<typeAlias type="com.kh.mybatis.member.vo.MemberVo" alias="MemberVo"/>
+  	<typeAlias type="com.kh.mybatis.board.vo.BoardVo" alias="BoardVo"/>
   </typeAliases>
 
   <environments default="e01">
@@ -28,8 +29,8 @@
   </environments>
   
   <mappers>
-    <mapper resource="/mybatis/member-mapper.xml"/>
-    <mapper resource="/mybatis/board-mapper.xml"/>
+ 	<mapper resource="/sql/board.xml"/>
+ 	<mapper resource="/sql/member.xml"/>
   </mappers>
   
 </configuration>
