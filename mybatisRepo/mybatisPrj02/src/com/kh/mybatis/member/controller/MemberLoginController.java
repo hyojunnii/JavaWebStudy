@@ -16,11 +16,11 @@ import com.kh.mybatis.member.vo.MemberVo;
 @WebServlet(urlPatterns = "/member/login")
 public class MemberLoginController extends HttpServlet {
 	
-	public MemberLoginController(EncryptorInter x) {
-		this.x = x;
-	}
-	
-	private EncryptorInter x;
+	/*
+	 * public MemberLoginController(EncryptorInter x) { this.x = x; }
+	 * 
+	 * private EncryptorInter x;
+	 */
 	
 	//로그인페이지
 	@Override
@@ -38,7 +38,7 @@ public class MemberLoginController extends HttpServlet {
 		vo.setId(id);
 		vo.setPwd(pwd);
 		
-		MemberVo loginMember = new MemberService(x).login(vo);
+		MemberVo loginMember = new MemberService().login(vo);
 		
 		if(loginMember != null) {
 			System.out.println("로그인 성공");

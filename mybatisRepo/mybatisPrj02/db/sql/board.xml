@@ -12,29 +12,29 @@
 		SELECT TITLE, CONTENT, ENROLL_DATE, DELETE_YN 
 		FROM BOARD 
 		WHERE DELETE_YN = 'N'
-		
 		<!-- <if test="condition == 'title'">
 			AND TITLE LIKE 
 		</if> -->
-		
 		<choose>
 			<when test="condition == 'title'">
 				AND TITLE LIKE 
 			</when>
-			<when test="condition == 'content'">
+			<otherwise>
 				AND CONTENT LIKE 
-			</when>
+			</otherwise>
 		</choose>
-		
-		
-		
-		<!-- '%'||#{keyword}||'%' -->
 		'%${keyword}%'
-		
 		ORDER BY ENROLL_DATE DESC
 	</select>
 	
 	<select id="selectListCount" resultType="_int">
 		SELECT COUNT(*) FROM BOARD WHERE DELETE_YN = 'N'
+		<if test="condition == 'title'">
+			AND TITLE LIKE '%'||#{keyword}||'%'
+		</if>
+		<if test="condition == 'content'">
+			AND CONTENT LIKE '%'||#{keyword}||'%'
+		</if>
 	</select>
+	
 </mapper>

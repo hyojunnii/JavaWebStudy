@@ -15,11 +15,11 @@ import com.kh.mybatis.member.vo.MemberVo;
 @WebServlet(urlPatterns = "/member/join")
 public class MemberJoinController extends HttpServlet {
 	
-	public void MemberLoginController(EncryptorInter x) {
-		this.x = x;
-	}
-	
-	private EncryptorInter x;
+	/*
+	 * public MemberLoginController(EncryptorInter x) { this.x = x; }
+	 * 
+	 * private EncryptorInter x;
+	 */
 	
 	//회원가입페이지
 	@Override
@@ -40,7 +40,7 @@ public class MemberJoinController extends HttpServlet {
 		vo.setPwd(pwd);
 		vo.setNick(nick);
 		
-		int result = new MemberService(x).join(vo);
+		int result = new MemberService().join(vo);
 		
 		if(result == 1) {
 			resp.sendRedirect("/my02");

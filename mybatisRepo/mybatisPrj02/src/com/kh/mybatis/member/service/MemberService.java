@@ -12,13 +12,13 @@ import com.kh.mybatis.member.vo.MemberVo;
 
 public class MemberService {
 	
-	public MemberService(EncryptorInter x) {
-		myEnc = x;
-	}
+	/*
+	 * public MemberService() { myEnc = x; }
+	 */
 	
 	private MemberDao dao = new MemberDao();
-	private EncryptorInter myEnc;
-	//private final EncryptorInter myEnc = new SecondEncryptor();
+	//private EncryptorInter myEnc;
+	private final EncryptorInter myEnc = new MyEncryptor();
 
 	//회원가입
 	public int join(MemberVo vo) {

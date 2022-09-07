@@ -59,10 +59,18 @@
           <option value="title">제목</option>
           <option value="content">내용</option>
         </select>
-        <input type="text" name="keyword" />
+        <input type="text" name="keyword" value="${keyword}"/>
         <input type="submit" value="검색" />
       </form>
     </div>
+    
+    <c:if test="${not empty condition}">
+    <script>
+    	window.onload = function() {
+    		document.querySelector('option[value=${condition}]').selected = true;
+    	}
+    </script>
+    </c:if>
 
     <div id="main">
       <div id="table-area">
@@ -86,7 +94,7 @@
       <div id="page-area">
         <div>
           <c:forEach begin="${pvo.startPage}" end="${pvo.endPage}" var="i">
-            <a href="/my02/board/list?p=${i}">${i}</a>
+            <a href="/my02/board/list?p=${i}&condition=${condition}&keyword=${keyword}">${i}</a>
           </c:forEach>
         </div>
       </div>

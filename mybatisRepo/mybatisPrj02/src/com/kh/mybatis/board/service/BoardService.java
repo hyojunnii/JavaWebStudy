@@ -39,11 +39,11 @@ public class BoardService {
 		return list;
 	}
 
-	public int selectListCount() {
+	public int selectListCount(Map<String, String> map) {
 		
 		SqlSession ss = getSqlSession();
 		
-		int result = new BoardDao().selectListCount(ss);
+		int result = new BoardDao().selectListCount(ss, map);
 		
 		ss.close();
 		

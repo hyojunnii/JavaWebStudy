@@ -27,8 +27,8 @@ public class BoardDao {
 		return ss.selectList("boardMapper.selectList", map, rb);
 	}
 
-	public int selectListCount(SqlSession ss) {
-		return ss.selectOne("boardMapper.selectListCount");
+	public int selectListCount(SqlSession ss, Map<String, String> map) {
+		return ss.selectOne("boardMapper.selectListCount", map);
 	}
 
 }
