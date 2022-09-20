@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<!-- DB관련 bean 등록 -->
+	<!-- SqlSessionTemplate -->
+	<bean id="sst" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="ssfb"/>
+	</bean>
+	
+	<!-- factory -->
+	<bean id="ssfb" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="bds"/>
+		<property name="mapperLocations" value="classpath:/mybatis/**/*-mapper.xml"/>
+		<!-- <property name="typeAliases" /> -->
+		<!-- <property name="configLocation" value="경로"/> -->
+	</bean>
+	
+	<!-- datasource -->
+	<bean id="bds" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe"/>
+		<property name="username" value="C##SPRING"/>
+		<property name="password" value="SPRING"/>
+	</bean>
+</beans>
