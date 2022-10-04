@@ -31,4 +31,10 @@ public class MemberLoginController extends HttpServlet{
 			System.out.println("로그인 실패");
 		}
 	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String phone = req.getParameter("phone");
+		String[] address = req.getParameterValues("address");
+	}
 }

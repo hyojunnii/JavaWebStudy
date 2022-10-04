@@ -10,5 +10,5 @@ public class MemberDaoImpl implements MemberDao {
 		System.out.println("멤버dao호출 ~");
 		return 1;
 	}
-
+	
 }
