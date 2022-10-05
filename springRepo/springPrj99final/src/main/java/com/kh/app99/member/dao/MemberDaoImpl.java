@@ -32,5 +32,11 @@ public class MemberDaoImpl implements MemberDao {
 		return sst.selectOne("memberMapper.selectOneByNo", vo.getNo());
 	}
 
+	//아이디 중복확인
+	@Override
+	public int selectCountId(SqlSessionTemplate sst, String memberId) {
+		return sst.selectOne("memberMapper.selectCountId", memberId);
+	}
+
 	
 }

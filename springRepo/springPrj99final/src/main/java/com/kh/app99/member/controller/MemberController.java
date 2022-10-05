@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.kh.app99.common.FileUploader;
 import com.kh.app99.member.service.MemberService;
@@ -123,6 +124,14 @@ public class MemberController {
 			model.addAttribute("msg", "정보수정실패");
 			return "error/errorPage";
 		}
+	}
+	
+	//아이디 중복확인
+	@PostMapping("dup")
+	@ResponseBody
+	public String dup(String memberId) {
+		int result = ms.checkDup(memberId);
+		return "" + result;
 	}
 	
 }//class

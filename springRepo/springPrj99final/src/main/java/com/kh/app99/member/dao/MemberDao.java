@@ -19,5 +19,8 @@ public interface MemberDao {
 	//회원조회 (회원번호)
 	MemberVo selectOneByNo(SqlSessionTemplate sst, MemberVo vo);
 
+	//아이디 중복확인
+	int selectCountId(SqlSessionTemplate sst, String memberId);
+
 	
 }

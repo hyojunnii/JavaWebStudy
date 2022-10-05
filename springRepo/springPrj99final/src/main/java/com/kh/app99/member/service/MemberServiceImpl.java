@@ -62,4 +62,10 @@ public class MemberServiceImpl implements MemberService{
 		return updatedMember;
 	}
 
+	//아이디 중복확인
+	@Override
+	public int checkDup(String memberId) {
+		return dao.selectCountId(sst, memberId);
+	}
+
 }//class

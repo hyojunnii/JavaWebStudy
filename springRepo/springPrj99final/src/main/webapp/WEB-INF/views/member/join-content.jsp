@@ -41,12 +41,13 @@
 </style>
 
 <div id="join-main">
-  <form action="" method="post" enctype="multipart/form-data">
+  <form action="" method="post" enctype="multipart/form-data" onsubmit="return check();">
     <div id="join-form">
       <div><label for="">아이디</label></div>
       <div>
         <input type="text" name="id" />
-        <button>중복확인</button>
+        <button type="button" onclick="checkDup();">중복확인</button>
+        <input type="hidden" value="o" id="isDup" />
       </div>
       <div><label for="">패스워드</label></div>
       <div><input type="password" name="pwd" /></div>
@@ -95,4 +96,59 @@
       imgTag.src = "";
     }
   };
+</script>
+
+<script>
+  const pwd = document.querySelector("input[name=pwd]");
+  const pwd2 = document.querySelector("input[name=pwd2]");
+  const mbti = document.querySelector("input[name=mbti]");
+
+  /*pwd2.addEventListener("blur", function () {
+    if (pwd.value != pwd2.value) {
+      alert("패스워드가 일치하지 않습니다");
+    }
+  });*/
+
+  function check() {
+    if (document.querySelector("#isDup").value == "o") {
+      alert("중복확인을 진행해주세요.");
+      return false;
+    }
+
+    if (pwd.value.length == 0 || pwd.value != pwd2.value) {
+      alert("패스워드가 일치하지 않습니다.");
+      return false;
+    }
+
+    if (mbti.value.length > 0 && mbti.value.length != 4) {
+      alert("MBTI를 다시 확인해주세요.");
+      return false;
+    }
+
+    return true;
+  }
+</script>
+
+<script>
+  function checkDup() {
+    const isDup = document.querySelector("#isDup");
+    const userId = document.querySelector("input[name=id]").value;
+    $.ajax({
+      url: "/app99/member/dup",
+      type: "POST",
+      data: { memberId: userId },
+      success: function (data) {
+        if (data == 0) {
+          isDup.value = "x";
+          alert("사용 가능한 아이디입니다.");
+        } else {
+          isDup.value = "o";
+          alert("사용 불가한 아이디입니다.");
+        }
+      },
+      error: function () {
+        alert("ajax 통신 실패");
+      },
+    });
+  }
 </script>

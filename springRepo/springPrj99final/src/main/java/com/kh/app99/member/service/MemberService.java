@@ -12,6 +12,9 @@ public interface MemberService {
 
 	//회원정보수정
 	MemberVo edit(MemberVo vo);
+
+	//아이디 중복확인
+	int checkDup(String memberId);
 	
 	//정보조회
 	

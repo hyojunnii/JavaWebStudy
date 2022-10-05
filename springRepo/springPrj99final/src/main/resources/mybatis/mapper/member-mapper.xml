@@ -23,4 +23,8 @@
 		FROM MEMBER
 		WHERE NO = #{no} AND STATUS = 'O'
 	</select>
+	
+	<select id="selectCountId" resultType="int">
+		SELECT COUNT(*) FROM MEMBER WHERE ID = #{memberId}
+	</select>
 </mapper>
