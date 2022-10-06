@@ -1,4 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<c:set value="/app99" var="root"/>
+
+<c:set var="alertMsg" value="${sessionScope.alertMsg}"/>
+<c:remove var="alertMsg" scope="session"/>
+
+<c:if test="${not empty alertMsg}">
+	<script>
+		alert('${alertMsg}');
+	</script>
+</c:if>
 
 <!-- 제이쿼리 -->    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -75,8 +87,8 @@
       </c:if>
    </div>
    
-   <div class="sidemenu">1</div>
-   <div class="sidemenu">2</div>
+   <div class="sidemenu"><a href="${root}/board/list">자유게시판</a></div>
+   <div class="sidemenu">사진게시판</div>
    <div class="sidemenu">3</div>
    <div class="sidemenu">4</div>
    

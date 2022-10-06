@@ -22,7 +22,7 @@
         <a href="${root}">
           <header><img width="100%" height="100%" alt="로고이미지" src="${root}/resources/img/cookie.jpg"></header>
         </a>
-        <%@ include file="/WEB-INF/views/home-content.jsp" %>
+        <%@ include file="/WEB-INF/views/board/write-content.jsp" %>
       </main>
 
       <aside>어사이드</aside>
