@@ -15,4 +15,7 @@ public interface BoardService {
 	//상세 조회
 	BoardVo selectOne(String no);
 
+	//게시글 수정
+	int edit(BoardVo vo);
+
 }

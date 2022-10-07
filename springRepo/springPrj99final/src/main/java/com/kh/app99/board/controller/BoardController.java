@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.method.P;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -76,6 +77,21 @@ public class BoardController {
 		
 		model.addAttribute("vo", vo);
 		return "board/edit";
+	}
+	
+	@PostMapping("edit/{no}")
+	public String edit(@PathVariable String no, BoardVo vo, HttpSession session) {
+		
+		vo.setNo(no);
+		int result = bs.edit(vo);
+		
+		if(result == 1) {
+			session.setAttribute("alertMsg", "게시글 수정 성공!");
+			return "redirect:/board/detail/" + no;
+		} else {
+			session.setAttribute("alertMsg", "게시글 수정 실패");
+			return "redirect:/";
+		}
 	}
 	
 }
