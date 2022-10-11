@@ -2,10 +2,12 @@ package com.kh.app99.board.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.session.RowBounds;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.kh.app99.board.vo.BoardVo;
+import com.kh.app99.common.PageVo;
 
 @Repository
 public class BoardDaoImpl implements BoardDao {
@@ -18,8 +20,13 @@ public class BoardDaoImpl implements BoardDao {
 
 	//목록조회
 	@Override
-	public List<BoardVo> selectList(SqlSessionTemplate sst) {
-		return sst.selectList("boardMapper.selectList");
+	public List<BoardVo> selectList(SqlSessionTemplate sst, PageVo pv) {
+		
+		int offset = (pv.getCurrentPage()-1) * pv.getBoardLimit();
+		
+		RowBounds rb = new RowBounds(offset, pv.getBoardLimit());
+		
+		return sst.selectList("boardMapper.selectList", null, rb);
 	}
 
 	//상세조회
@@ -34,10 +41,22 @@ public class BoardDaoImpl implements BoardDao {
 		return sst.update("boardMapper.increaseHit", no);
 	}
 
-	//게시글수정
+	//게시글 수정
 	@Override
 	public int updateOne(SqlSessionTemplate sst, BoardVo vo) {
 		return sst.update("boardMapper.updateOne", vo);
+	}
+
+	//게시글 갯수 조회
+	@Override
+	public int selectCountAll(SqlSessionTemplate sst) {
+		return sst.selectOne("boardMapper.selectCountAll");
+	}
+
+	//게시글 삭제
+	@Override
+	public int delete(SqlSessionTemplate sst, String no) {
+		return sst.update("boardMapper.deleteBoard", no);
 	}
 	
 

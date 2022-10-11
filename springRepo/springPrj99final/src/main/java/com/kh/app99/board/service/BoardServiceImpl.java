@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.kh.app99.board.dao.BoardDao;
 import com.kh.app99.board.vo.BoardVo;
+import com.kh.app99.common.PageVo;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -29,8 +30,8 @@ public class BoardServiceImpl implements BoardService {
 
 	//목록조회
 	@Override
-	public List<BoardVo> selectList() {
-		return dao.selectList(sst);
+	public List<BoardVo> selectList(PageVo pv) {
+		return dao.selectList(sst, pv);
 	}
 
 	//상세조회
@@ -48,6 +49,18 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public int edit(BoardVo vo) {
 		return dao.updateOne(sst, vo);
+	}
+
+	//전체 게시글 갯수 조회
+	@Override
+	public int selectTotalCnt() {
+		return dao.selectCountAll(sst);
+	}
+
+	//게시글 삭제
+	@Override
+	public int delete(String no) {
+		return dao.delete(sst, no);
 	}
 
 }//class

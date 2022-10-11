@@ -49,5 +49,11 @@
 		WHERE NO = #{no}
 	</update>
 	
+	<select id="selectCountAll" resultType="int">
+		SELECT COUNT(NO) FROM BOARD WHERE STATUS = 'O'
+	</select>
 	
+	<update id="deleteBoard">
+		UPDATE BOARD SET STATUS = 'X' WHERE NO = #{no}
+	</update>
 </mapper>

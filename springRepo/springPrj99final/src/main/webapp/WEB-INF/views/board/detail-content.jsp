@@ -22,6 +22,36 @@
   	width: 60vw;
   	text-align: center;
   }
+  
+  #reply-area {
+  	width: 60vw;
+  	border: 1px solid black;
+  }
+  
+  #reply-top {
+  	border-bottom: 1px dashed black;
+  }
+  
+  #reply-top>textarea {
+  	width: 80%;
+  }
+  
+  #reply-top>button {
+  	width: 15%;dw
+  }
+  
+  .reply-bot {
+  	border-bottom: 1px solid gray;
+  }
+  
+  .reply-bot > div {
+	width: 80%; 
+	display: inline-block;
+  }
+  
+  .reply-bot > span {
+	width: 10%;  
+  }
 </style>
 
 <form action="" method="post">
@@ -40,4 +70,54 @@
 		</div>
 	</c:if>
 </form>
+
+<div id="reply-area">
+	<div id="reply-top">
+		<textarea name="content" id="reply-content"></textarea>
+		<button id="reply-btn" class="btn btn-primary">댓글작성</button>
+	</div>
+	<!-- 댓글 목록 -->
+	<div id="reply-list">
+		<c:forEach items="${replyList}" var="l">
+			<div class="reply-bot">
+				<div>${l.content}</div>
+				<span>${l.writer}</span>
+			</div>
+		</c:forEach>
+	</div>
+</div>
+
+<script>
+	const replyBtn = document.querySelector('#reply-btn');
+	
+	replyBtn.addEventListener('click', function() {
+		const replyContent = document.querySelector('#reply-content').value;
+		const boardNo = ${vo.no};
+		const replyWriterNick = '${sessionScope.loginMember.nick}';
+		$.ajax({
+			url : "${root}/reply/write",
+			type : "POST",
+			data : {
+				content : replyContent,
+				bno : boardNo
+			},
+			success : function(result) {
+				if(result == 'ok'){
+					alert("댓글 작성 성공 !");
+					const target = document.querySelector('#reply-list');
+					
+					$(target).prepend('<div class="reply-bot"><div>' + replyContent + '</div><span>'+ replyWriterNick +'</span></div>');
+				} else {
+					alert("댓글 작성 실패 ..");				
+				}
+			},
+			error : function() {
+				alert("통신 에러 ..");
+			}
+		});
+	});
+
+</script>
+
+
 

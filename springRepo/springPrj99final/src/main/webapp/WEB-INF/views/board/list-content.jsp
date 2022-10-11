@@ -50,11 +50,15 @@
 </c:if>
 
 <div id="page-area">
-  <a class="btn btn-primary btn-sm" href="">&lt</a>
-  <a class="btn btn-primary btn-sm" href="">1</a>
-  <a class="btn btn-primary btn-sm" href="">2</a>
-  <a class="btn btn-primary btn-sm" href="">3</a>
-  <a class="btn btn-primary btn-sm" href="">4</a>
-  <a class="btn btn-primary btn-sm" href="">5</a>
-  <a class="btn btn-primary btn-sm" href="">&gt</a>
+	<c:if test="${pv.startPage ne 1}">
+	  <a class="btn btn-primary btn-sm" href="${pv.startPage-1}">&lt</a>
+	</c:if>
+  
+  <c:forEach begin="${pv.startPage}" end="${pv.endPage}" var="i">
+  	<a class="btn btn-primary btn-sm" href="${root}/board/list/${i}">${i}</a>
+  </c:forEach>
+  
+  <c:if test="${pv.endPage ne pv.maxPage}">
+  	<a class="btn btn-primary btn-sm" href="${pv.endPage+1}">&gt</a>
+  </c:if>
 </div>
