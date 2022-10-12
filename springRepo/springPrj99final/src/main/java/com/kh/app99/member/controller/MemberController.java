@@ -1,6 +1,7 @@
 package com.kh.app99.member.controller;
 
 import java.io.File;
+import java.util.List;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -132,6 +133,17 @@ public class MemberController {
 	public String dup(String memberId) {
 		int result = ms.checkDup(memberId);
 		return "" + result;
+	}
+	
+	//회원목록조회
+	@GetMapping("list")
+	public String list(Model model) {
+		
+		List<MemberVo> voList = ms.selectList();
+		
+		model.addAttribute("voList", voList);
+		
+		return "member/list";
 	}
 	
 }//class

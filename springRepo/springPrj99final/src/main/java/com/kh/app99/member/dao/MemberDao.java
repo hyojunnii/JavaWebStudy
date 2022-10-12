@@ -1,5 +1,7 @@
 package com.kh.app99.member.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 
 import com.kh.app99.member.vo.MemberVo;
@@ -21,6 +23,9 @@ public interface MemberDao {
 
 	//아이디 중복확인
 	int selectCountId(SqlSessionTemplate sst, String memberId);
+
+	//회원목록조회
+	List<MemberVo> selectList(SqlSessionTemplate sst);
 
 	
 }

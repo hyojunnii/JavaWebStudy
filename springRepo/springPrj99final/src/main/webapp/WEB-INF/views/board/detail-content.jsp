@@ -105,8 +105,10 @@
 				if(result == 'ok'){
 					alert("댓글 작성 성공 !");
 					const target = document.querySelector('#reply-list');
-					
 					$(target).prepend('<div class="reply-bot"><div>' + replyContent + '</div><span>'+ replyWriterNick +'</span></div>');
+
+					//기존 내용 지우기
+					document.querySelector('#reply-content').value = '';
 				} else {
 					alert("댓글 작성 실패 ..");				
 				}

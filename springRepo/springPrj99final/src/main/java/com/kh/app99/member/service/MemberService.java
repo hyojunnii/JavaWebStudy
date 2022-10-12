@@ -1,5 +1,7 @@
 package com.kh.app99.member.service;
 
+import java.util.List;
+
 import com.kh.app99.member.vo.MemberVo;
 
 public interface MemberService {
@@ -15,6 +17,9 @@ public interface MemberService {
 
 	//아이디 중복확인
 	int checkDup(String memberId);
+
+	//회원 목록 조회
+	List<MemberVo> selectList();
 	
 	//정보조회
 	

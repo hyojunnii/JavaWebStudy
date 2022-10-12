@@ -27,4 +27,8 @@
 	<select id="selectCountId" resultType="int">
 		SELECT COUNT(*) FROM MEMBER WHERE ID = #{memberId}
 	</select>
+	
+	<select id="selectList" resultType="MemberVo">
+		SELECT * FROM MEMBER WHERE STATUS = 'O' ORDER BY NO DESC
+	</select>
 </mapper>

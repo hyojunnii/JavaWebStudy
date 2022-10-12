@@ -1,5 +1,7 @@
 package com.kh.app99.member.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -36,6 +38,12 @@ public class MemberDaoImpl implements MemberDao {
 	@Override
 	public int selectCountId(SqlSessionTemplate sst, String memberId) {
 		return sst.selectOne("memberMapper.selectCountId", memberId);
+	}
+
+	//회원목록조회
+	@Override
+	public List<MemberVo> selectList(SqlSessionTemplate sst) {
+		return sst.selectList("memberMapper.selectList");
 	}
 
 	
