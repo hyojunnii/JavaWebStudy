@@ -20,5 +20,6 @@ Java 기반 클라우드 융합과정 <br>
 ![Badge](https://img.shields.io/badge/-JSP-blue?style=flat)
 ![Badge](https://img.shields.io/badge/-Mybatis-F80000?style=flat)
 ![Badge](https://img.shields.io/badge/-jQuery-0769AD?style=flat)
+![Badge](https://img.shields.io/badge/-Ajax-0769AD?style=flat)
 
 </div>
